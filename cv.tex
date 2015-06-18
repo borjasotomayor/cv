@@ -1,0 +1,476 @@
+\documentclass{resume}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+
+\renewcommand{\categoryfont}{\sc}
+\setlength{\oddsidemargin}{1in}
+\setlength{\marginparwidth}{1in}\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+\setlength{\topmargin}{-0.5in}
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\author{Borja Sotomayor}
+
+\hyphenation{IFCA CSIC}
+
+\address{University of Chicago\\
+	Department of Computer Science\\
+	1100 East 58th Street\\
+	Chicago, IL 60637\\
+	\mbox{\small\tt borja@cs.uchicago.edu}\\
+	\mbox{\url{http://people.cs.uchicago.edu/~borja/}}}
+	
+\begin{document}
+\maketitle	
+
+% ------- Education ---------------------------------------------------
+\section*{\hspace{-1cm}Education}
+\begin{category}{}
+\citem{Ph.D. in Computer Science}, 2010\\
+University of Chicago. Advisor: Ian Foster.\\
+Dissertation: \emph{Provisioning Computational Resources with Virtual Machines and Leases} 
+\citem{M.S. in Computer Science}, 2007\\
+University of Chicago. Advisor: Ian Foster.\\
+Master's Paper: \emph{A Resource Management Model for VM-based Virtual Workspaces} 
+\citem{\emph{Ingeniero en Informática}}, 2003\\
+\textbf{(Computer Engineer)}\\
+University of Deusto (Bilbao, Spain)\\
+Overall grade: \emph{Sobresaliente} (Top 5-10\%)\\
+Graduating project on Globus Toolkit 3 awarded \emph{Matricula de Honor} (Top 1-5\%)  
+\citem{\emph{Ingeniero Técnico en Informática de Gestión}}, 2001\\
+\textbf{(Technical Engineer in Business Computing)}\\
+University of Deusto (Bilbao, Spain)\\
+Overall grade: \emph{Matricula de Honor} (Top 1-5\%)\\
+\end{category}
+
+\section*{\hspace{-1cm}Employment}
+\begin{category}{University of Chicago}
+\citemnobullet{} See \emph{Research} and \emph{Teaching} sections below for more details on these positions.
+\citem{Department of Computer Science}, 2012 -- \emph{present}\\
+Associate Director of Technology, Master's Program in Computer Science
+\citem{Department of Computer Science}, 2010 -- \emph{present}\\
+Lecturer
+\citem{Computation Institute}, 2010 -- 2012\\
+Researcher
+\citem{Department of Computer Science}, 2004 -- 2010\\
+Research and Teaching Assistant
+\citem{Department of Computer Science}, 2005, 2006, 2007\\
+Lecturer (Summer Quarter only)
+\end{category}
+\begin{category}{University of Deusto}
+\citem{School of Engineering}, October 2003 -- September 2004\\
+\emph{Profesor Ayudante} (Non-doctor Junior Faculty)
+\citem{School of Engineering}, October 1999 -- September 2003\\
+Web programming intern
+\end{category}
+
+\pagebreak
+
+
+
+% ------- Research ---------------------------------------------------
+
+
+\begin{center}
+\section*{\huge Research}
+\vspace{2ex}
+\end{center}
+
+
+\begin{category}{Research interests}
+\citembullet I am interested in virtual machine-based resource provisioning models (where ``resource'' includes hardware, software, and time) using a leasing abstraction. Although I'm not fond of buzzwords, most of my recent work could be described as relevant to Infrastructure-as-a-Service (IaaS) "cloud computing", since IaaS clouds use virtual machines to provision computational resources and my work deals with how to (1) map heterogeneous user requests (best effort, advance reservations, immediate availability, etc.) to virtual machines and (2) provision those virtual machines efficiently. Since a lot of my work involves writing resource scheduling code, my secondary interests include parallel job scheduling and scheduling performance metrics.  A detailed research statement is available upon request, or through my University of Chicago website (\url{http://people.cs.uchicago.edu/~borja/research.html})
+\end{category}
+%\begin{category}{Current projects}
+%\end{category}
+\begin{category}{Past Projects}
+\citem{Globus Online}\\
+Staff Researcher, September 2010 -- June 2012\\
+I was a staff researcher in the Globus Online team at the University of Chicago's Computation Institute, where I focuses on resource provisioning problems. I was the main developer of the Globus Provision project (\url{http://globus.org/provision/}), a tool for deploying fully-configured Globus systems on Amazon EC2.
+\citem{Reservoir (EU FP7 project)}\\
+Visiting Researcher at University Complutense of Madrid, 06/2008 -- 10/2008, 06/2009 -- 10/2009\\
+Ongoing collaboration with the University Complutense of Madrid's Distributed Systems Architecture group (\url{http://www.dsa-research.org/})
+\citem{Virtual Workspaces}\\
+Research Assistant, September 2005 -- 2008\\
+\url{http://workspace.globus.org/}
+\citem{CrossGrid}\\
+Research Associate, February 2004 -- July 2004\\
+Writing and revising tutorial material.
+\citem{BOOLE--DEUSTO}\\ 
+Lead Programmer, October 2000 -- September 2004\\
+\textsf{BOOLE--DEUSTO} is a software aid for Digital Electronics courses.
+\end{category}
+
+\section*{\hspace{-1cm}Publications}
+
+Citations and additional information also available on my Google Scholar profile:\\ \url{http://bit.ly/google-scholar-borja}
+
+\subsection*{Books}
+\begin{category}{}
+\citembullet \emph{Globus® Toolkit 4: Programming Java Services}. Borja Sotomayor, Lisa Childers. December 2005, Morgan Kaufmann Publishers. ISBN: 0123694043.
+\end{category}
+
+\subsection*{Book Chapters}
+\begin{category}{}
+\citembullet \emph{On the Management of Virtual Machines for Cloud Infrastructures}. M. Llorente, R. S. Montero, B. Sotomayor, D. Breitgand, A. Maraschini, E. Levy, B. Rochwerger, in \emph{Cloud Computing: Principles and Paradigms}, Editors: Radjkumar Buyya, James Broberg, Andrzej M. Goscinski, Wiley, 2011.
+\end{category}
+
+\subsection*{Theses}
+\begin{category}{}
+\citembullet \textbf{Dissertation}. \emph{Provisioning Computational Resources Using Virtual Machines and Leases}. University of Chicago, Department of Computer Science. Defended July 7, 2010. \url{http://people.cs.uchicago.edu/~borja/dissertation/}
+\citembullet \textbf{Master's Paper}. \emph{A Resource Management Model for VM-based Virtual Workspaces}. University of Chicago, Department of Computer Science. Defended January 3rd, 2007.
+\end{category}
+
+
+\subsection*{Refereed Papers}
+\begin{category}{}
+\citembullet B.Liu, R.Madduri, B.Sotomayor, et al. \emph{Cloud-based bioinformatics workflow platform for large-scale next-generation sequencing analyses}. Journal of Biomedical Informatics, Vol. 49 (June 2014), pp. 119-133
+\citembullet B.Liu, B.Sotomayor, R.Madduri, K.Chard, I.Foster. \emph{Deploying Bioinformatics Workflows on Clouds with Galaxy and Globus Provision}. In Proceedings of the 2012 SC Companion: High Performance Computing, Networking Storage and Analysis (SCC '12). IEEE Computer Society, Washington, DC, USA, 1087-1095.
+\citembullet B.Sotomayor, R.Santiago Montero, I.Martín Llorente, I.Foster, \emph{Virtual Infrastructure Management in Private and Hybrid Clouds}. IEEE Internet Computing, vol. 13, no. 5, pp. 14-22, Sep./Oct. 2009.
+\citembullet B.Sotomayor, R.Santiago Montero, I.Martín Llorente, I.Foster, \emph{Resource Leasing and the Art of Suspending Virtual Machines}. The 11th IEEE International Conference on High Performance Computing and Communications (HPCC-09), June 25-27, 2009, Seoul, Korea.
+\citembullet B.Sotomayor, R.Santiago Montero, I.Martín Llorente, I.Foster, \emph{Capacity Leasing in Cloud Systems using the OpenNebula Engine} (short paper). Workshop on Cloud Computing and its Applications 2008 (CCA08), October 22-23, 2008, Chicago, Illinois, USA.
+\citembullet B.Sotomayor, K.Keahey, I.Foster, \emph{Combining Batch Execution and Leasing Using Virtual Machines}. HPDC 2008, June 23-27, 2008, Boston, Massachusetts, USA.
+\citembullet A.Almeida, B.Sotomayor, J.Abaitua, D.López-de-Ipiña, \emph{folk2onto: Bridging the gap between social tags and ontologies}. KRRSW 2008 (part of ESWC 2008), June 1-5, 2008, Tenerife, Spain. 
+\citembullet B.Sotomayor, K.Keahey, I.Foster, T.Freeman. \emph{Enabling Cost-Effective Resource Leases with Virtual Machines} (short paper). Hot Topics session in HPDC 2007, Monterey Bay, CA (USA), June 27-29, 2007.
+\citembullet T.Freeman, K.Keahey, I.Foster, A.Rana, B.Sotomayor, F.Wuerthwein. \emph{Division of Labor: Tools for Growth and Scalability of Grids}. ICSOC 2006, Chicago (USA), December 4-7, 2006.
+\citembullet B.Sotomayor, K.Keahey, I.Foster. \emph{Overhead Matters: A Model for Virtual Resource Management}. VTDC 2006 (part of SuperComputing '06), Tampa, FL (USA), November 17, 2006. 
+\citembullet T.Freeman, K.Keahey, B.Sotomayor, X.Zhang, I.Foster, and D.Scheftner. \emph{Virtual Clusters for Grid Communities}. CCGrid 2006, Singapore, May 16-19, 2006.
+\citembullet A.Rana, F.Wuerthwein, R.Gardner, K.Keahey, T.Freeman, A.Vaniachine, B.Holzman, et al. \emph{An Edge Services Framework (ESF) for EGEE, LCG, and OSG}. CHEP (Computing in High Energy and Nuclear Physics) 2006, Mumbai, February 13-17, 2006.
+\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{A new approach to educational software for logic analysis and design}. IADAT e2004, International Conference on Education, Bilbao (Spain), July 7--9, 2004.
+\citembullet Javier García Zubía and Borja Sotomayor Basilio. \emph{Software for analysis and design of digital systems in education. A comparison between BOOLE-DEUSTO and LogicAid} (short paper). EWME 2004,  5th European Workshop on Microelectronics Education, Lausanne (Switzerland), April 15--16, 2004.
+\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{BOOLE-DEUSTO, la aplicación para
+sistemas digitales}. VII Jornadas de Enseñanza Universitaria de la
+Informática, JENUI 2001 (Palma de Mallorca, June 16--18, 2001).
+ISBN: 84--7632--657--2. Pgs. 417--420.
+\end{category}
+
+\subsection*{Non-refereed work}
+\begin{category}{}
+\citembullet I.Foster, T.Freeman, K.Keahey, A.Rana, B.Sotomayor, F.Wuerthwein. \emph{ANL/MCS-P1316-0106. Division of Labor: Tools for Growth and Scalability of Grids} (technical report). January 2006
+\citembullet Borja Sotomayor, Lisa Childers. \emph{GDP: The Globus Documentation Project} (poster). GlobusWORLD 2005, Boston (USA), February 7-11, 2005.
+\end{category}
+
+\subsection*{Translations}
+\begin{category}{}
+\citembullet Translation into Spanish of Chapter 9 (\emph{Numbers}) of the \emph{Chicago Manual of Style (16th Ed.)}, as part of the official adaptation of the Chicago Manual of Style into Spanish: \emph{Manual de estilo Chicago-Deusto}, Publicaciones de la Universidad de Deusto, 2013. ISBN: 978-84-15759-14-0.
+\end{category}
+
+
+\subsection*{Software}
+\begin{category}{}
+\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{Manual de usuario del BOOLE-DEUSTO v2.1 - Entorno de diseño lógico / BOOLE-DEUSTOren erabiltzaileentzako eskuliburua / BOOLE-DEUSTO user manual} [Includes CD-ROM]. Universidad de Deusto - Departamento de Publicaciones. Bilbao (Spain), 2005. ISBN: 84--7485--973--5.
+\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{BOOLE-DEUSTO, entorno de diseño lógico}. Universidad de Deusto--Departamento de Publicaciones. Bilbao (Spain), 2004. ISBN: 84--7485--929--8.
+\end{category}
+
+
+\subsection*{Popular press}
+\begin{category}{}
+\citembullet Pablo Garaizar Sagarminaga, Alvaro Marín Illera, and Borja Sotomayor Basilio.\emph{e-GHOST y GedI: Fomentando Software Libre y Web fuera de las aulas}. Revista ESIDE (\#4), 2003. DL: BI--599--00. Pgs. 5--7. 
+\citembullet Unai Extremo Baigorri and Borja Sotomayor Basilio.
+\emph{La Plataforma .NET: ¿El Futuro de la Web?}. Revista ESIDE
+(\#3), 2002. DL: BI--599--00. Págs. 18--21.
+\end{category}
+
+\section*{\hspace{-1cm}Research talks and seminars}
+
+\subsection*{Workshops and tutorials}
+\begin{category}{}
+\citembullet \emph{Preparing for XD: How TG Resource Providers Can Easily Enable Globus Online for Data Movement}. Borja Sotomayor, Rajkumar Kettimuthu, Stuart Martin. July 18, 2011, Teragrid 2011, Salt Lake City, Utah, USA.
+\citembullet \emph{Enabling Your HPC Cluster with Globus}. April 13, 2011. GlobusWORLD 2011, Chicago, Illinois, USA.
+\citembullet \emph{Entornos Grid Basados en Globus Toolkit 4}. July 4-6, 2007. Universidad Complutense de Madrid (Madrid, Spain). 15-hour course on GT4 service programming with the Introduce IDE. This course is a part of Curso Superior de Administración, Explotación y Programación de Sistemas Grid (3ª Edición), a 100-hour summer course on Grid Computing.
+\citembullet \emph{Computación Grid}. June 18-29, 2007. Universidad de los Andes (Bogotá, Colombia). 
+\citembullet \emph{The FileBuy Globus Based Resource Brokering System - A Practical Example}. September 15, 2006. GlobusWORLD 2006, Washington D.C. (USA).
+\citembullet \emph{Development Tools for GT4 Service Programming}. Borja Sotomayor (session organizer), Shannon Hastings, Thomas Friese, Thomas Cottenier. Mini-symposium, GlobusWORLD 2006, Washington D.C. (USA), September 11-15, 2006.
+\citembullet \emph{Entornos Grid Basados en Globus Toolkit 4}. July 3-7, 2006. Universidad Complutense de Madrid (Madrid, Spain). 20-hour course on GT4 programming. This course is a part of Curso Superior de Administración, Explotación y Programación de Sistemas Grid (2ª Edición), a 100-hour summer course on Grid Computing.
+\citembullet \emph{Entornos Grid Basados en Globus Toolkit 4}. July 6-12, 2005. Universidad Complutense de Madrid (Madrid, Spain). 25-hour course on GT4 programming. This course is a part of Curso Superior de Administración, Explotación y Programación de Sistemas Grid, a 100-hour summer course on Grid Computing.
+\citembullet \emph{Evolución de Globus}. June 23, 2004. Instituto de Física de Cantabria (Santander, Spain). 2-hour presentation on the evolution and future trends of the Globus Toolkit. This presentation was a part of \emph{Grids y e-Ciencia}, a 30-hour postgraduate course on Grid Computing.
+\citembullet \emph{Sistemas Grid Basados en GT3}. March 3--5, 2004. Centro de Supercomputación de Galicia (Santiago de Compostela, Spain). 15-hour course on GT3 programming.
+\end{category}
+
+\subsection*{Talks}
+\begin{category}{} 
+\citembullet \emph{Globus Provision: A Tool for Deploying Globus Systems on Amazon EC2}. Data Lunch Seminar, Computation Institute, University of Chicago. September 16, 2011.
+\citembullet \emph{Reliable File Transfers with Globus Online}. Invited Talk, International Research Workshop on Advanced High Performance Computing Systems, Cetraro, Italy, June 27, 2011.
+\citembullet \emph{Resource Leasing and the Art of Suspending Virtual Machines}. Paper presentation, The 11th IEEE International Conference on High Performance Computing and Communications (HPCC-09), June 25-27, 2009, Seoul, Korea.
+\citembullet \emph{Capacity Leasing in Cloud Systems using the OpenNebula Engine}. Paper presentation, Workshop on Cloud Computing and its Applications 2008 (CCA08), October 22-23, 2008, Chicago, Illinois, USA.
+\citembullet \emph{Combining Batch Execution and Leasing Using Virtual Machines}. Paper presentation, HPDC 2008, June 23-27, 2008, Boston, Massachusetts, USA.
+\citembullet \emph{A Gentle Introduction to Grid Computing}. CS Pizza Seminar, University of Chicago. February 18, 2008.
+\citembullet \emph{Grid Computing y Virtualización}. Cursillos de Julio 2007, University of Deusto (Bilbao, Spain). July 10, 2007.
+\citembullet \emph{Virtual Workspaces: State of the Art and Current Directions}. DSL Workshop 2007, University of Chicago. May 29, 2007.
+\citembullet \emph{Virtual Machines for Grid Computing}. Midwest Grid Workshop 2007, Chicago, Illinois. March 24-25, 2007.
+\citembullet \emph{Virtual Workspaces: Dynamic Virtual Environments in the Grid}. Invited talk, 2nd ESAC Grid Workshop, Madrid (Spain), October 5-6, 2006. 
+\citembullet \emph{Nuevas Perspectivas en Lenguajes de Programación: Teoría de Tipos y Seguridad de Tipos}. Cursillos de Julio 2006, University of Deusto (Bilbao, Spain). July 10, 2006.
+\citembullet \emph{Resource Management for Virtual Clusters}. DSL Workshop 2006, University of Chicago. June 2, 2006.
+\citembullet \emph{A Gentle Introduction to Grid Computing}. CS/TTI Grad Student Cake Talk Series, University of Chicago. February 15, 2006.
+\citembullet \emph{Límites Computacionales: Introducción a la Teoría de la Computación y de la Complejidad}. Cursillos de Julio 2005, University of Deusto (Bilbao, Spain). July 15, 2005.
+\citembullet \emph{GT3IDE: An Eclipse plug-in for Globus Toolkit programmers}. Borja Sotomayor, Marcos López, Txus Sánchez. GlobusWORLD 2005, Boston (USA), February 7-11, 2005.
+\citembullet \emph{Towards a Service-Oriented Grid}. Invited Talk, 4th CRAC (Grid and Peer-to-Peer Middleware for Cooperative Learning Environments) Workshop, Valladolid (Spain), June 16, 2004.
+\citembullet \emph{Introducción a la Computación Grid}. Semana ESIDE 2004, University of Deusto (Bilbao, Spain). April 30, 2004. 
+\end{category}{}
+
+
+
+\pagebreak
+
+% ------- Teaching ---------------------------------------------------
+\begin{center}
+\section*{\huge Teaching}
+\vspace{2ex}
+\end{center}
+
+\section*{\hspace{-1cm}University Courses Taught}
+
+See provided URLs for detailed syllabuses of each course.
+
+\begin{category}{University of Chicago} 
+\citemnobullet \emph{Introductory courses (100-level):}
+\citem{CMSC 10600 - Fundamentals of Computer Programming II (C++)}\\
+2011 Winter: \url{http://www.classes.cs.uchicago.edu/archive/2011/winter/10600-1/}
+\citem{CMSC 12100 - Computer Science with Applications 1}\\
+2014 Fall: \url{http://www.classes.cs.uchicago.edu/archive/2014/fall/12100-1/}\\
+2012 Fall: \url{http://www.classes.cs.uchicago.edu/archive/2012/fall/12100-1/}
+\citem{CMSC 12300 - Computer Science with Applications 3}\\
+2013 Spring: \url{http://www.classes.cs.uchicago.edu/archive/2013/spring/12300-1/}
+\citem{CMSC 15200 - Introduction to Computer Science 2}\\
+2007 Summer: \url{http://www.classes.cs.uchicago.edu/archive/2007/summer/15200-91/}\\
+2006 Summer: \url{http://www.classes.cs.uchicago.edu/archive/2006/summer/15200-91/}\\
+2005 Summer: \url{http://www.classes.cs.uchicago.edu/archive/2005/summer/15200-1/}
+\citemnobullet \emph{Majors-level courses (200-level):}
+\citem{CMSC 23000 - Operating Systems}\\
+2011 Winter: \url{http://www.classes.cs.uchicago.edu/archive/2011/winter/23000-1/}
+\citem{CMSC 23300 - Networks and Distributed Systems}\\
+2015 Winter: \url{http://www.classes.cs.uchicago.edu/archive/2015/winter/23300-1/}\\
+2014 Winter: \url{http://www.classes.cs.uchicago.edu/archive/2014/winter/23300-1/}\\
+2013 Spring: \url{http://www.classes.cs.uchicago.edu/archive/2013/spring/23300-1/}\\
+2012 Winter: \url{http://www.classes.cs.uchicago.edu/archive/2012/winter/23300-1/}\\
+2011 Spring: \url{http://www.classes.cs.uchicago.edu/archive/2011/spring/23300-1/}
+\citem{CMSC 23310 - Advanced Distributed Systems}\\
+2014 Spring: \url{http://www.classes.cs.uchicago.edu/archive/2014/spring/23310-1/}
+2012 Spring: \url{http://www.classes.cs.uchicago.edu/archive/2012/spring/23310-1/}
+\end{category}
+
+\begin{category}{University of Deusto} 
+\citem{Seminario de Sistemas UNIX}\\
+2003/04 Second Semester. An introduction to UNIX systems administration for Telecommunications Engineering students.
+\citem{Laboratorio de Informática I}\\
+2003/04 First Semester. An introduction to computer programming with C/C++ for Computer Engineering students.
+\end{category}
+
+\section*{\hspace{-1cm}Pedagogical Consulting}
+
+I have been a Teaching Consultant at the Chicago Center for Teaching (\url{http://teaching.uchicago.edu/}, formerly the Center for Teaching and Learning) since 2008. My responsibilities include carrying out Individual Teaching Consultations and Mid-Course Reviews for graduate instructors and faculty, teaching workshops on course design and collaborative learning, and participating in meetings on a variety of topics related to teaching and learning in a university setting.
+
+I hold a \emph{Certificate in Pedagogical Consulting} from the Center for Teaching and Learning at the University of Chicago.
+
+\subsection*{Workshops and Seminars Taught}
+\begin{category}{}
+\citembullet \emph{Workshop on Collaborative Learning}, Chicago Center for Teaching, University of Chicago. November 12th, 2014.
+\citembullet \emph{Workshop on Collaborative Learning}, Center for Teaching and Learning, University of Chicago. May 2nd, 2014.
+\citembullet \emph{Workshop on Collaborative Learning}, Center for Teaching and Learning, University of Chicago. February 7th, 2014.
+\citembullet \emph{Workshop on Collaborative Learning}, Center for Teaching and Learning, University of Chicago. November 19th, 2013.
+\citembullet \emph{Authority and Ethics in the Classroom: Establishing Your Role as a Teacher} (with Malynne Sternstein), Workshop on Teaching in the College, The University of Chicago, September 25, 2013.
+\citembullet \emph{Eat. Teach. Talk. Run!} (with Joela Jacobs), Center for Teaching and Learning, University of Chicago. May 22nd, 2013.
+\citembullet \emph{Creating Assignments to Structure Your Course}, (with Brandon Cline), Center for Teaching and Learning, University of Chicago. February 25th, 2013.
+\citembullet \emph{Workshop on Collaborative Learning}, Center for Teaching and Learning, University of Chicago. February 13th, 2012.
+\citembullet \emph{Seminar on Course Design}, Center for Teaching and Learning, University of Chicago. January 9th, 2012.
+\citembullet \emph{Seminar on Course Design}, Center for Teaching and Learning, University of Chicago. October 18th, 2011.
+\citembullet \emph{Authority and Ethics in the Classroom: Establishing Your Role as a Teacher} (with Malynne Sternstein), Workshop on Teaching in the College, The University of Chicago, September 21, 2010.
+\citembullet \emph{Workshop on Collaborative Learning}, Center for Teaching and Learning, University of Chicago. October 27th, 2009.
+\citembullet \emph{Workshop on Collaborative Learning}, Center for Teaching and Learning, University of Chicago. April 7th, 2009. 
+\citembullet \emph{Teaching in the American Classroom} (with Cecilia Lo and Moishe Postone), Workshop on Teaching in the College, The University of Chicago, September 18, 2007.
+\end{category}
+
+
+
+
+\section*{\hspace{-1cm}Other Teaching Experience}
+
+\begin{category}{University of Chicago} 
+\citem{Lab Instructor for \emph{CMSC 23500 - Introduction to Databases}} (Spring 2009)\\
+Designed and ran the labs for the course. Designed and implemented a didactic relational database management system called $\chi\textsf{db}$ (\url{http://people.cs.uchicago.edu/~borja/chidb/})
+\citem{Grader for \emph{CMSC 23500 - Introduction to Databases}} (Spring 2008)\\
+Graded homeworks and ran an optional discussion group.
+\citem{Lab Instructor for \emph{CMSC 16200 - Honors Introduction to Computer Science 2}} (Winter 2006 and 2007)\\
+Designed and ran the labs for the course. My work on this course earned me the department's Annual Teaching Assistant Prize.
+\end{category}
+
+\begin{category}{University of Deusto} 
+\citem{Summer Course Instructor} (Summer 2000 -- Summer 2004)\\
+Taught short 15-20 hour courses (each spanning a week). Courses taught: \emph{Basic Web Programming} (2000--03), \emph{Advanced Web Programming} (2001), \emph{Fundamentals of XML} (2002--04), \emph{Introduction to \LaTeX} (2002--03), and \emph{Digital Editing with \LaTeX{} and DocBook} (2004).
+\citem{Teaching Assistant} (Second Semester 1999/2000, 2000/01, 2001/02, 2002/03)\\
+Tutored and graded projects in \emph{Tecnología de los Computadores} (a project-based C++ course) and \emph{Tecnología Informática Multimedia} (a project-based multimedia course).
+\end{category}
+
+\pagebreak
+
+% ------- Service ---------------------------------------------------
+\begin{center}
+\section*{\huge Service}
+\vspace{2ex}
+\end{center}
+
+\section*{\hspace{-1cm}Peer Review}
+
+\begin{category}{Program Committee Chair}
+\citembullet Poster/demo co-chair. 14th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing
+May 26-29, 2014 -- Chicago, IL, USA.
+\end{category}
+
+\vspace{1em}
+
+\begin{category}{Program Committee Member}
+\citembullet 8th Workshop on Virtualization in High-Performance Cloud Computing (VHPC'13), November 22, 2013, Denver, Colorado.
+\citembullet 7th Workshop on Virtualization in High-Performance Cloud Computing (VHPC'12), August 28, 2012, Rhodes Island, Greece
+\citembullet 10th IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA'12), 10-13 July 2012, Madrid, Spain 
+\citembullet 2nd International Workshop on Data Intensive Computing in the Clouds (DataCloud-SC11), November 14th, 2011, Seattle, Washington, USA
+\citembullet 6th Workshop on Virtualization in High-Performance Cloud Computing (VHPC'11), August 30, 2011, Bordeaux, France
+\citembullet 5th Workshop on Virtualization in High-Performance Cloud Computing (VHPC'10), August 31, 2010, Naples, Italy
+\citembullet 5th International Workshop on Content Delivery Networks (CDN 2010), May 17-20, 2010, Melbourne, Australia
+\citembullet V Jornadas Científico-Técnicas en Servicios Web y SOA, September 30 - October 1, 2009, Madrid, Spain
+\citembullet IV Jornadas Científico-Técnicas de Servicios Web y SOA, October 29-30, 2008, Seville, Spain
+\end{category}
+
+\begin{category}{Reviewer (Journals)}
+\citembullet ACM Transactions on Internet Technology (\url{http://toit.acm.org/})
+\citembullet IEEE Transactions on Cloud Computing (\url{http://www.computer.org/portal/web/tcc/})
+\citembullet IEEE Transactions on Computers (\url{http://www.computer.org/portal/web/tc/})
+\citembullet IEEE Transactions on Parallel and Distributed Systems (\url{http://www.computer.org/portal/web/tpds})
+\citembullet Journal of Parallel and Distributed Computing (\url{http://ees.elsevier.com/jpdc/})
+\end{category}
+
+\begin{category}{Reviewer (Delegated)}
+\citembullet The International Conference for High Performance Computing, Networking, Storage, and Analysis 2011 (SC'11), November 14-17, 2011, Seattle, Washington, USA
+\citembullet 17th International European Conference on Parallel and Distributed Computing (Euro-Par 2011), August 29-September 2, 2011 
+\citembullet Energy Efficient Grids, Clouds and Clusters Workshop 2009 (E2GC2 2009), October 13, 2009, Banff, Canada 
+\citembullet Workshop on Many-Task Computing on Grids and Supercomputers 2008 (MTAGS 2008), November 17th, 2008, Austin, Texas, USA
+\end{category}
+
+\pagebreak
+
+\section*{\hspace{-1cm}Student Activities}
+
+\begin{category}{}
+\citem{Academic Advisor}, 2010 -- \emph{present}\\
+I am the academic advisor for the following Registered Student Organizations (\url{https://studentactivities.uchicago.edu/}) at the University of Chicago:
+\begin{itemize}
+ \item hack@uchicago (\url{http://hack.uchicago.edu/}). Since 2011.
+ \item Student Chapter of the Association for Computing Machinery (\url{http://acm.cs.uchicago.edu/}). Advisor since 2010. As a graduate student, I was the chapter's Secretary from 2007 to 2009, and its Chair from 2009 to 2010.
+ \item Student Chapter of the Association for Computing Machinery's Committee on Women in Computing (ACM-W). Since 2014.
+\end{itemize}
+\citem{ICPC Coach}, 2007 -- \emph{present}\\
+The ACM International Collegiate Programming Contest (ICPC) is the world's largest and oldest collegiate programming competition. I coach the University of Chicago's ICPC teams, and my responsibilities include selecting and advising teams, organizing practice contests, organizing a qualifying contest before the regional contest, and coordinating the logistics of our participation in the World Finals (when the University of Chicago qualifies for the finals). I have led teams to the 2009, 2010, 2011, 2012, 2013, 2014, and 2015 World Finals of the ICPC. Only 120 teams out of nearly 10,000 teams each year earn this distinction. More details about the University of Chicago's participation in ICPC can be found at \url{http://icpc.cs.uchicago.edu/}
+\end{category}
+
+
+\section*{\hspace{-1cm}Organization of Programming Competitions}
+
+\begin{category}{}
+\citem{Site Director}, Chicago site of the ACM/ICPC 2014 Mid-Central USA Programming Contest, November 1st, 2014, \url{http://icpc.cs.uchicago.edu/mcpc2014}
+\citem{Contest Director}, North American Invitational Programming Contest 2014, March 28-30, 2014. \url{http://naipc.uchicago.edu/2014}\\
+This contest was open to the 21 North American teams that advanced to that year's World Finals of the ICPC.
+\citem{Site Director}, Chicago site of the ACM/ICPC 2013 Mid-Central USA Programming Contest, November 2nd, 2013, \url{http://icpc.cs.uchicago.edu/mcpc2013}
+\citem{Contest Director}, University of Chicago Invitational Programming Contest 2013, March 29-31, 2013. \url{http://icpc.cs.uchicago.edu/invitational2013}\\
+This contest was open to the 23 North American teams that advanced to that year's World Finals of the ICPC. 
+\citem{Site Director}, Chicago site of the ACM/ICPC 2012 Mid-Central USA Programming Contest, November 3rd, 2012, \url{http://icpc.cs.uchicago.edu/mcpc2012}
+\citem{Contest Director}, University of Chicago Invitational Programming Contest 2012, April 14-15, 2012. \url{http://icpc.cs.uchicago.edu/invitational2012}\\
+This contest was open to the 22 North American teams that advanced to that year's World Finals of the ICPC. 
+\end{category}
+
+
+\section*{\hspace{-1cm}Open Source Software}
+
+My open source code can be found on GitHub: \url{https://github.com/borjasotomayor} and \url{https://github.com/globusonline/provision}. I also contribute to several repositories in \url{https://github.com/uchicago-cs}
+
+\begin{category}{}
+\citembullet I have published the following open source projects:
+
+\begin{itemize}
+ \item \textbf{Globus Provision} (\url{http://globus.org/provision/}), a tool for deploying fully-configured Globus systems on Amazon EC2. No longer under active development.
+ \item \textbf{Haizea} (\url{http://haizea.cs.uchicago.edu/}), a virtual machine-based lease management architecture I developed for my PhD research. No longer under active development.
+\end{itemize}
+
+\citembullet I have been a contributor to the OpenNebula project (\url{http://www.opennebula.org/}), an open source data center virtualization suite. I have also been the Community Manager for the OpenNebula project from 2010 to 2012.
+
+\citembullet I have participated in Google Summer of Code (\url{http://code.google.com/soc/}) several times:
+
+\begin{itemize}
+ \item 2011: Mentor and Organization Administrator for The Globus Alliance.
+ \item 2010: Organization Administrator for The Globus Alliance. Mentor for the OpenNebula project (\url{http://www.opennebula.org/}).
+ \item 2009: Organization Administrator for The Globus Alliance.
+ \item 2008: Mentor and Organization Administrator for The Globus Alliance (\url{http://www.globus.org/})
+\end{itemize}
+\end{category}
+
+
+\section*{\hspace{-1cm}Industry}
+
+\begin{category}{}
+\citem{Steadfast Networks} (Chicago, IL): Advisory Board member. 2011 -- \emph{present}.
+\end{category}
+
+\pagebreak
+
+% ------- Miscellaneous ---------------------------------------------------
+\begin{center}
+\section*{\huge Miscellaneous}
+\vspace{2ex}
+\end{center}
+
+\section*{\hspace{-1cm}Personal data}
+\begin{category}{}
+\citem{Date of birth}: November 4, 1980
+\citem{Citizenship}: Spain
+\citem{US Immigration Status}: Lawful Permanent Resident
+\end{category}
+
+\section*{\hspace{-1cm}Skills}
+
+\begin{category}{Technical Skills}
+\citem{Programming Languages}: Proficient in Python and C/C++. Conversant in Java.
+\citem{System Administration}: Proficient in GNU/Linux system administration. Working knowledge of Apache and MySQL.
+\citem{Web Programming}: Working knowledge of HTML, JavaScript, Ruby on Rails, PHP, XML, XSLT, Web Services.
+\citem{Databases}: Advanced knowledge of relational database analysis, design, and implementation. Working knowledge of MySQL.
+\citem{Document Composition}: Proficient in \LaTeX{}.
+\end{category}
+
+\begin{category}{Languages}
+\citem{Spanish} Native language.
+\citem{English} Spoken and written with fluency. Bilingual education from ages 2--15. Certificate of
+Proficiency in English from the University of Cambridge with overall grade of A.
+\citem{Euskera (Basque)} Basic knowledge. Reached 6th level of HABE (studied from 1997 to 1999 in a Basque Language Academy or \emph{euskaltegi}).
+\end{category}
+
+\section*{\hspace{-1cm}Affiliations}
+
+\begin{category}{}
+\citembullet Association for Computing Machinery (Member)
+\citembullet Electronic Frontier Foundation (Member)
+\citembullet Free Software Foundation (Associate Member)
+\end{category}
+
+\section*{\hspace{-1cm}Awards, Prizes, and Honors}
+
+\begin{category}{}
+\citem{ICPC 2015 World Finals}\\Honorable Mention (coach)
+\citem{ICPC 2014 World Finals}\\Honorable Mention (coach)
+\citem{ICPC Coach Award}\\Awarded at ICPC 2013 World Finals for leading a team to the World Finals of the ICPC five times.
+\citem{ICPC 2013 World Finals}\\Honorable Mention (coach)
+\citem{ICPC 2012 World Finals}\\Honorable Mention (coach)
+\citem{ICPC 2011 World Finals}\\Honorable Mention (coach)
+\citem{ICPC 2010 World Finals}\\Honorable Mention (coach)
+\citem{ICPC 2009 World Finals}\\Honorable Mention (coach)
+\citem{2007 Annual Teaching Assistant Prize (Department of Computer Science, The University of Chicago)}\\``In recognition for [his] excellent work in developing and teaching the CMSC 16200 lab''.
+\citem{2006 Globus Awards}\\Best Contribution to Globus Software by a Non-committer, for \emph{The Globus Toolkit 4 Programmer's Tutorial}
+\end{category}
+
+
+
+\end{document}
