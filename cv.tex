@@ -1,5 +1,6 @@
 \documentclass{resume}
 \usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
 \usepackage{url}
 
 \renewcommand{\categoryfont}{\sc}
@@ -30,7 +31,9 @@
 	\mbox{\url{http://people.cs.uchicago.edu/~borja/}}}
 	
 \begin{document}
-\maketitle	
+\maketitle
+\renewcommand{\thepage}{\arabic{page}}
+\pagestyle{myheadings}
 
 \section*{\hspace{-1cm}Employment}
 \begin{category}{University of Chicago\\(Academic)}
