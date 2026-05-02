@@ -1,212 +1,199 @@
-\documentclass{resume}
+\documentclass[11pt,letterpaper,sans]{moderncv}
+
+\moderncvcolor{blue}
+\moderncvstyle{classic}
+
 \usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage{url}
-
-\renewcommand{\categoryfont}{\sc}
-\setlength{\oddsidemargin}{1in}
-\setlength{\marginparwidth}{1in}\addtolength{\marginparwidth}{-\marginparsep}
- \setlength{\evensidemargin}{\oddsidemargin}
- \setlength{\textwidth}{\paperwidth}
- \addtolength{\textwidth}{-2in}
- \addtolength{\textwidth}{-2\oddsidemargin}
- \addtolength{\textwidth}{\marginparwidth}
- \addtolength{\textwidth}{\marginparsep}
-\setlength{\topmargin}{-0.5in}
-\renewcommand{\labelcitem}{$\diamond$}
-\renewcommand{\labelitemi}{$\cdot$}
-\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
-\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
-\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
-
-\author{Borja Sotomayor}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[scale=0.82]{geometry}
 
 \hyphenation{IFCA CSIC}
 
-\address{University of Chicago\\
-	Department of Computer Science\\
-	5730 South Ellis Avenue\\
-	Chicago, IL 60637\\
-	\mbox{\small\tt borja@cs.uchicago.edu}\\
-	\mbox{\url{http://people.cs.uchicago.edu/~borja/}}}
-	
+% --- Personal data ---
+\name{Borja}{Sotomayor}
+\address{Department of Computer Science}{University of Chicago}{5730 South Ellis Avenue, Chicago, IL 60637}
+\email{borja@uchicago.edu}
+\homepage{people.cs.uchicago.edu/\string~borja/}
+\social[github]{borjasotomayor}
+\social[googlescholar]{pxOnzrUAAAAJ}
+
+% --- Custom command for "super-section" banners ---
+\newcounter{supersectionctr}
+\newcommand{\supersection}[1]{%
+  \refstepcounter{supersectionctr}%
+  \phantomsection%
+  \pdfbookmark[0]{#1}{supersec\thesupersectionctr}%
+  \bigskip
+  \begin{center}
+  {\huge\bfseries #1}
+  \end{center}
+  \medskip
+}
+
 \begin{document}
-\maketitle
-\renewcommand{\thepage}{\arabic{page}}
-\pagestyle{myheadings}
+\makecvtitle
 
-\section*{\hspace{-1cm}Employment}
-\begin{category}{University of Chicago\\(Academic)}
-\citem{Department of Computer Science}, 2023 -- \emph{present}\\
-(Full) Senior Instructional Professor
-\citem{Department of Computer Science}, 2021 -- 2023\\
-Associate Senior Instructional Professor
-\citem{Department of Computer Science}, 2015 -- 2020\\
-Senior Lecturer
-\citem{Department of Computer Science}, 2010 -- 2015\\
-Lecturer (part-time)
-\end{category}
-\begin{category}{University of Chicago\\(Admin)}
-\citem{Department of Computer Science}, 2019 -- 2025\\
-Director, Masters Program in Computer Science
-\citem{Department of Computer Science}, 2015 -- 2019\\
-Associate Director for Academics, Masters Program in Computer Science
-\citem{Department of Computer Science}, 2012 -- 2015\\
-Associate Director for Technology, Masters Program in Computer Science
-\end{category}
-\begin{category}{University of Chicago\\(Other)}
-\citem{Computation Institute}, 2010 -- 2012\\
-Researcher
-\end{category}
-\begin{category}{University of Deusto}
-\citem{School of Engineering}, October 2003 -- September 2004\\
-\emph{Profesor Ayudante} (Non-doctor Junior Faculty)
-\citem{School of Engineering}, October 1999 -- September 2003\\
-Web programming intern
-\end{category}
+% =======================================================================
+\section{Employment}
+% =======================================================================
 
-% ------- Education ---------------------------------------------------
-\section*{\hspace{-1cm}Education}
-\begin{category}{}
-\citem{Ph.D. in Computer Science}, 2010\\
-University of Chicago. Advisor: Ian Foster.\\
-Dissertation: \emph{Provisioning Computational Resources with Virtual Machines and Leases} 
-\citem{M.S. in Computer Science}, 2007\\
-University of Chicago. Advisor: Ian Foster.\\
-Master's Paper: \emph{A Resource Management Model for VM-based Virtual Workspaces} 
-\citem{\emph{Ingeniero en Informática}}, 2003\\
-\textbf{(Computer Engineer)}\\
-University of Deusto (Bilbao, Spain)\\
-Overall grade: \emph{Sobresaliente} (Top 5-10\%)\\
-Graduating project on Globus Toolkit 3 awarded \emph{Matricula de Honor} (Top 1-5\%)  
-\citem{\emph{Ingeniero Técnico en Informática de Gestión}}, 2001\\
-\textbf{(Technical Engineer in Business Computing)}\\
-University of Deusto (Bilbao, Spain)\\
-Overall grade: \emph{Matricula de Honor} (Top 1-5\%)\\
-\end{category}
+\subsection{University of Chicago (Academic)}
+\cventry{2023 -- now}{(Full) Senior Instructional Professor}{Department of Computer Science}{}{}{}
+\cventry{2021 -- 2023}{Associate Senior Instructional Professor}{Department of Computer Science}{}{}{}
+\cventry{2015 -- 2020}{Senior Lecturer}{Department of Computer Science}{}{}{}
+\cventry{2010 -- 2015}{Lecturer (part-time)}{Department of Computer Science}{}{}{}
+
+\subsection{University of Chicago (Leadership)}
+\cventry{2026 -- now}{Director of Teaching and Learning}{Department of Computer Science}{}{}{}
+\cventry{2019 -- 2025}{Director, Masters Program in Computer Science}{Department of Computer Science}{}{}{}
+\cventry{2015 -- 2019}{Associate Director for Academics, Masters Program in Computer Science}{Department of Computer Science}{}{}{}
+\cventry{2012 -- 2015}{Associate Director for Technology, Masters Program in Computer Science}{Department of Computer Science}{}{}{}
+
+\subsection{University of Chicago (Other)}
+\cventry{2010 -- 2012}{Researcher}{Computation Institute}{}{}{}
+
+\subsection{University of Deusto}
+\cventry{2003 -- 2004}{\emph{Profesor Ayudante} (Non-doctor Junior Faculty)}{School of Engineering}{}{}{}
+\cventry{1999 -- 2003}{Student Developer (Web Development)}{School of Engineering}{}{}{}
+
+% =======================================================================
+\section{Education}
+% =======================================================================
+
+\cventry{2010}{Ph.D. in Computer Science}{University of Chicago}{}{}{Advisor: Ian Foster.\newline Dissertation: \emph{Provisioning Computational Resources with Virtual Machines and Leases}}
+\cventry{2007}{M.S. in Computer Science}{University of Chicago}{}{}{Advisor: Ian Foster.\newline Master's Paper: \emph{A Resource Management Model for VM-based Virtual Workspaces}}
+\cventry{2003}{\emph{Ingeniero en Inform\'atica} (Computer Engineer)}{University of Deusto}{Bilbao, Spain}{}{Overall grade: \emph{Sobresaliente} (Top 5--10\%)\newline Graduating project on Globus Toolkit 3 awarded \emph{Matricula de Honor} (Top 1--5\%)}
+\cventry{2001}{\emph{Ingeniero T\'ecnico en Inform\'atica de Gesti\'on} (Technical Engineer in Business Computing)}{University of Deusto}{Bilbao, Spain}{}{Overall grade: \emph{Matricula de Honor} (Top 1--5\%)}
 
 
-% ------- Teaching ---------------------------------------------------
+% =======================================================================
+\newpage
+\supersection{Teaching}
+% =======================================================================
 
-\begin{center}
-\section*{\huge Teaching}
-\vspace{2ex}
-\end{center}
-
-\section*{\hspace{-1cm}University Courses Taught}
+% -----------------------------------------------------------------------
+\section{University Courses Taught}
+% -----------------------------------------------------------------------
 
 Links to detailed syllabi and course websites can be found at \url{http://people.cs.uchicago.edu/~borja/teaching/}
 
-\begin{category}{University of Chicago\\(Current)} 
-\citem{CMSC 14200 - Introduction to Computer Science II} (2023 -- \emph{present})\\
-This is the second course in the CS introductory sequence at UChicago. In this class, students explore more advanced concepts in computer science and Python programming, with an emphasis on skills required to build complex software, such as object-oriented programming, advanced data structures, functions as first-class objects, testing, and debugging. The class also introduces students to basic aspects of the software development lifecycle, with an emphasis on software design. Students also gain further fluency in working with the Linux command-line, including some basic operating system concepts, as well as the use of version control systems for collaborative software development.
+\subsection{University of Chicago (Current)}
 
-\citem{CMSC 23320 - Foundations of Computer Networks} (2011 -- \emph{present})\\
-This course focuses on the principles and techniques used in the development of networked and distributed software. Topics include programming with sockets; concurrent programming; data link layer (Ethernet, packet switching, 802.11, etc.); internet and routing protocols (IP, IPv6, ARP, intra-domain and inter-domain routing, etc.); end-to-end protocols (UDP, TCP); and other commonly used network protocols and techniques. \emph{Note}: This class was formerly known as CMSC 23300 - Networks and Distributed Systems.
+\cvitem{CMSC 14200}{%
+\textbf{Introduction to Computer Science II} (2023 -- \emph{present})\newline
+This is the second course in the CS introductory sequence at UChicago. In this class, students explore more advanced concepts in computer science and Python programming, with an emphasis on skills required to build complex software, such as object-oriented programming, advanced data structures, functions as first-class objects, testing, and debugging. The class also introduces students to basic aspects of the software development lifecycle, with an emphasis on software design. Students also gain further fluency in working with the Linux command-line, including some basic operating system concepts, as well as the use of version control systems for collaborative software development.}
 
-\citem{CMSC 22000 - Introduction to Software Development} (2018 -- \emph{present})\\
-This class bridges the gap between knowing how to program and knowing how to develop software: it is intended for students who have just completed an introductory sequence in Computer Science, and covers fundamental concepts and skills in software development, providing a solid foundation before students move on to majors-level classes that require developing complex software systems. The class covers foundational topics in software development in lectures, but also includes hands-on labs, guest lectures from industry speakers, and a collaborative quarter-long project, where the entire class, divided into teams with specific responsibilities, works on developing a new feature for an existing software system.
-\end{category}
+\cvitem{CMSC 23320}{%
+\textbf{Foundations of Computer Networks} (2011 -- \emph{present})\newline
+This course focuses on the principles and techniques used in the development of networked and distributed software. Topics include programming with sockets; concurrent programming; data link layer (Ethernet, packet switching, 802.11, etc.); internet and routing protocols (IP, IPv6, ARP, intra-domain and inter-domain routing, etc.); end-to-end protocols (UDP, TCP); and other commonly used network protocols and techniques. \emph{Note}: This class was formerly known as CMSC 23300 - Networks and Distributed Systems.}
 
-\begin{category}{University of Chicago\\(Past)} 
+\cvitem{CMSC 22000}{%
+\textbf{Introduction to Software Development} (2018 -- \emph{present})\newline
+This class bridges the gap between knowing how to program and knowing how to develop software: it is intended for students who have just completed an introductory sequence in Computer Science, and covers fundamental concepts and skills in software development, providing a solid foundation before students move on to majors-level classes that require developing complex software systems. The class covers foundational topics in software development in lectures, but also includes hands-on labs, guest lectures from industry speakers, and a collaborative quarter-long project, where the entire class, divided into teams with specific responsibilities, works on developing a new feature for an existing software system.}
 
-\citem{CMSC 12100 - Computer Science with Applications 1} (2012, 2014 -- 2021)
-\citem{MPCS 52030 - Operating Systems} (2017)
-\citem{CMSC 23310 - Advanced Distributed Systems} (2012, 2014, 2016)
-\citem{CMSC 12300 - Computer Science with Applications 3} (2013)
-\citem{CMSC 23000 - Operating Systems} (2011)
-\citem{CMSC 10600 - Fundamentals of Computer Programming II} (2011)
-\citem{CMSC 15200 - Introduction to Computer Science 2} (2005, 2006, 2007)\\
-These offerings of CMSC 15200 were taught during UChicago's Summer Session while I was a graduate student.
-\end{category}
+\subsection{University of Chicago (Past)}
 
-\begin{category}{University of Deusto} 
-\citem{Seminario de Sistemas UNIX}\\
-2003/04 Second Semester. An introduction to UNIX systems administration for Telecommunications Engineering students.
-\citem{Laboratorio de Informática I}\\
-2003/04 First Semester. An introduction to computer programming with C/C++ for Computer Engineering students.
-\end{category}
+\cvitem{}{%
+\textbf{CMSC 12100 - Computer Science with Applications 1} (2012, 2014 -- 2021)\newline
+\textbf{MPCS 52030 - Operating Systems} (2017)\newline
+\textbf{CMSC 23310 - Advanced Distributed Systems} (2012, 2014, 2016)\newline
+\textbf{CMSC 12300 - Computer Science with Applications 3} (2013)\newline
+\textbf{CMSC 23000 - Operating Systems} (2011)\newline
+\textbf{CMSC 10600 - Fundamentals of Computer Programming II} (2011)\newline
+\textbf{CMSC 15200 - Introduction to Computer Science 2} (2005, 2006, 2007)\newline
+These offerings of CMSC 15200 were taught during UChicago's Summer Session while I was a graduate student.}
 
+\subsection{University of Deusto}
 
-\section*{\hspace{-1cm}Workshops, Tutorials, BoFs}
+\cvitem{}{%
+\textbf{Seminario de Sistemas UNIX}\newline
+2003/04 Second Semester. An introduction to UNIX systems administration for Telecommunications Engineering students.\newline
+\textbf{Laboratorio de Inform\'atica I}\newline
+2003/04 First Semester. An introduction to computer programming with C/C++ for Computer Engineering students.}
 
-This section lists workshops I have (co-)organized in the area of CS education. Please see the Publications section further below for a list of research-oriented workshops I have been involved in.
+% -----------------------------------------------------------------------
+\section{Teaching Development and Outreach}
+% -----------------------------------------------------------------------
 
-\begin{category}{}
-\citembullet \emph{CRA-E Professional Development for Teaching-Track Faculty} (workshop). A full-day, in-person workshop held in conjunction with the ACM SIGCSE Technical Symposium. Co-organized in 2023, 2024, 2025, and 2026.
+\subsection{University of Chicago}
 
-\url{https://cra.org/crae/cra-professional-development-pre-symposium-for-teaching-track-faculty/}
-\citembullet \emph{CRA-E Virtual Career Landscape Workshop}. A yearly series of online workshops focused on explaining the landscape of teaching-track careers. Co-organized in 2024, 2025, and 2026.
+\cvitem{Director of Teaching and Learning}{I am currently transitioning to a new role in the Department of Computer Science as the \emph{Director of Teaching and Learning}, where I will be providing support to anyone in the department with teaching responsibilities, from undergraduate TAs to tenure-line faculty. I will also be supporting PhD students who plan to pursue teaching-focused careers.}
 
-\url{https://cra.org/crae/career-landscape-workshop/}
-\citembullet \emph{Practical Systems Programming in Computer Science Education} (Birds-of-a-Feather). P.H.Fröhlich and B.Sotomayor. 2017 ACM SIGCSE Technical Symposium on Computer Science Education (SIGCSE '17).
-\citembullet \emph{Increasing Programming Contest Participation for Fun and Profit} (Birds-of-a-Feather). A.Bloomfield and B.Sotomayor. 2016 ACM SIGCSE Technical Symposium on Computer Science Education (SIGCSE '16).
-\end{category}
+\cvitem{Center for Teaching and Learning}{I am a frequent collaborator of UChicago's Center for Teaching and Learning (CCTL, \url{http://teaching.uchicago.edu/}), where I often participate in panel discussions on a variety of topics related to teaching and learning. I co-organize the following programs through the CCTL:}
 
-\section*{\hspace{-1cm}Pedagogy}
+\cvlistitem{\emph{Colloquium on the Evaluation of Teaching} (\url{https://teaching.uchicago.edu/programs/colloquium-evaluation-teaching}). A two-day in-person colloquium for faculty and instructors who evaluate teaching, followed by check-in discussions throughout the academic year. Co-organized in 2023, 2024, and 2026.}
+\cvlistitem{\emph{Exploratory Teaching Group on Specifications Grading} (\url{https://teaching.uchicago.edu/programs/exploratory-teaching-groups}). A year-long collaborative group exploring specifications grading as an assessment approach. Co-organized since 2023.}
 
-I am currently transitioning to a new role in the Department of Computer Science as the \emph{Director of Teaching and Learning}, where I will be providing support to anyone in the department with teaching responsibilities, from undergraduate TAs to tenure-line faculty. I will also be supporting PhD students who plan to pursue teaching-focused careers.
+\cvitem{}{I have prior experience as a Teaching Consultant at the CCTL from 2008 to 2014. My responsibilities included carrying out Individual Teaching Consultations and Mid-Course Reviews for graduate instructors and faculty, and teaching a number of workshops, including multiple offerings of the following:}
+\cvlistitem{Workshop on Collaborative Learning}
+\cvlistitem{Seminar on Course Design}
+\cvlistitem{Authority and Ethics in the Classroom: Establishing Your Role as a Teacher}
 
-I am a frequent collaborator of UChicago's Center for Teaching and Learning (CCTL, \url{http://teaching.uchicago.edu/}), where I often participate in panel discussions on a variety of topics related to teaching and learning. I also co-lead an Exploratory Teaching Group on Alternate Assessment Techniques.
+\cvitem{}{I also hold a \emph{Certificate in Pedagogical Consulting} from the Center for Teaching and Learning at the University of Chicago.}
 
-I have prior experience as a Teaching Consultant at the CCTL from 2008 to 2014. My responsibilities included carrying out Individual Teaching Consultations and Mid-Course Reviews for graduate instructors and faculty, and teaching a number of workshops, including multiple offerings of the following:
+\subsection{CS Education Community}
 
-\begin{itemize}
- \item Workshop on Collaborative Learning
- \item Seminar on Course Design
- \item Authority and Ethics in the Classroom: Establishing Your Role as a Teacher
-\end{itemize}
+\cvitem{CRA-E}{I have been a member of the Education Committee of the Computing Research Association (CRA) since 2022. My work on this committee focuses on finding ways to support teaching-track faculty, as well as CS students interested in pursuing a teaching career. I am involved in the following efforts:}
 
-I also hold a \emph{Certificate in Pedagogical Consulting} from the Center for Teaching and Learning at the University of Chicago.
+\cvlistitem{\emph{Career Landscapes Workshop}\newline
+ \url{https://cra.org/crae/career-landscape-workshop/}\newline
+ Co-organized in 2024, 2025, and 2026. \newline
+ A yearly series of online workshops focused on explaining the landscape of teaching-track careers, how to prepare for these careers, and what to expect from the application process.}
+\cvlistitem{\emph{Professional Development Pre-Symposium for Teaching-Track Faculty}\newline
+ \url{https://cra.org/crae/cra-professional-development-pre-symposium-for-teaching-track-faculty/}\newline
+ Co-organized in 2023, 2024, 2025, and 2026. \newline
+ An annual event held in conjunction with the SIGCSE Technical Symposium. Designed for teaching-track faculty in PhD-granting computing departments, this full-day, in-person workshop offers tailored professional development, hands-on learning, and networking for early to mid-career educators and those considering a teaching-track career path.}
 
-\section*{\hspace{-1cm}Teaching Tools and Approaches}
+\cvitem{SIGCSE}{Earlier SIGCSE contributions include the following:}
+\cvlistitem{\emph{Practical Systems Programming in Computer Science Education} (Birds-of-a-Feather). P.H.Fr\"ohlich and B.Sotomayor. 2017 ACM SIGCSE Technical Symposium on Computer Science Education (SIGCSE '17).}
+\cvlistitem{\emph{Increasing Programming Contest Participation for Fun and Profit} (Birds-of-a-Feather). A.Bloomfield and B.Sotomayor. 2016 ACM SIGCSE Technical Symposium on Computer Science Education (SIGCSE '16).}
 
-\begin{category}{Educational\\Technology}
-\citem{Learning Management}: Canvas LMS.
-\citem{Assessment}: Gradescope for assignment and exam grading.
-\citem{Software Development}: GitHub Classroom for distributing and collecting programming assignments; Git and GitHub for collaborative student projects.
-\citem{Educational Software}: Designer of several educational programming projects (\url{https://chi.cs.uchicago.edu/}):
+% -----------------------------------------------------------------------
+\section{Teaching Tools and Approaches}
+% -----------------------------------------------------------------------
+
+\subsection{Educational Technology}
+\cvitem{Learning Management}{Canvas LMS.}
+\cvitem{Assessment}{Gradescope for assignment and exam grading.}
+\cvitem{Software Development}{GitHub Classroom for distributing and collecting programming assignments; Git and GitHub for collaborative student projects.}
+\cvitem{Educational Software}{Designer of several educational programming projects (\url{https://chi.cs.uchicago.edu/}):
 \begin{itemize}
 \item \textbf{chiRC}: a simple Internet Relay Chat server.
 \item \textbf{chiTCP}: a simple TCP/IP protocol stack.
 \item \textbf{chirouter}: a simple IP router.
 \item \textbf{chidb}: a simple relational database system.
-\end{itemize}
-\end{category}
+\end{itemize}}
 
-\begin{category}{Pedagogical\\Approaches}
-\citem{Assessment}: Experience with student-centered grading approaches, including Specifications Grading.
-\citem{Collaborative Learning}: Experience designing project-based courses involving team-based software development with industry-style workflows.
-\end{category}
+\subsection{Pedagogical Approaches}
+\cvitem{Assessment}{Experience with student-centered grading approaches, including Specifications Grading.}
+\cvitem{Collaborative Learning}{Experience designing project-based courses involving team-based software development with industry-style workflows.}
 
-\section*{\hspace{-1cm}Other Teaching Experience}
+% -----------------------------------------------------------------------
+\section{Other Teaching Experience}
+% -----------------------------------------------------------------------
 
-\begin{category}{University of Chicago} 
-\citem{Lab Instructor for \emph{CMSC 23500 - Introduction to Databases}} (Spring 2009)\\
-Designed and ran the labs for the course. Designed and implemented a didactic relational database management system called $\chi\textsf{db}$ (\url{http://people.cs.uchicago.edu/~borja/chidb/})
-\citem{Grader for \emph{CMSC 23500 - Introduction to Databases}} (Spring 2008)\\
-Graded homeworks and ran an optional discussion group.
-\citem{Lab Instructor for \emph{CMSC 16200 - Honors Introduction to Computer Science 2}} (Winter 2006 and 2007)\\
-Designed and ran the labs for the course. My work on this course earned me the department's Annual Teaching Assistant Prize.
-\end{category}
+\subsection{University of Chicago}
+\cventry{2009}{Lab Instructor for \emph{CMSC 23500 - Introduction to Databases}}{}{}{}{Designed and ran the labs for the course. Designed and implemented a didactic relational database management system called chidb (\url{http://people.cs.uchicago.edu/~borja/chidb/})}
+\cventry{2008}{Grader for \emph{CMSC 23500 - Introduction to Databases}}{}{}{}{Graded homeworks and ran an optional discussion group.}
+\cventry{2006, 2007}{Lab Instructor for \emph{CMSC 16200 - Honors Introduction to Computer Science 2}}{}{}{}{Designed and ran the labs for the course. My work on this course earned me the department's Annual Teaching Assistant Prize.}
 
-\begin{category}{University of Deusto} 
-\citem{Summer Course Instructor} (Summer 2000 -- Summer 2004)\\
-% Taught short 15-20 hour courses (each spanning a week). Courses taught: \emph{Basic Web Programming} (2000--03), \emph{Advanced Web Programming} (2001), \emph{Fundamentals of XML} (2002--04), \emph{Introduction to \LaTeX} (2002--03), and \emph{Digital Editing with \LaTeX{} and DocBook} (2004).
-\citem{Teaching Assistant} (Second Semester 1999/2000, 2000/01, 2001/02, 2002/03)\\
-Tutored and graded projects in \emph{Tecnología de los Computadores} (a project-based C++ course) and \emph{Tecnología Informática Multimedia} (a project-based multimedia course).
-\end{category}
+\subsection{University of Deusto}
+\cventry{2000 -- 2004}{Summer Course Instructor}{}{}{}{Taught week-long intensive courses on web development}
+\cventry{1999 -- 2003}{Teaching Assistant}{}{}{}{Tutored and graded projects in \emph{Tecnolog\'ia de los Computadores} (a project-based C++ course) and \emph{Tecnolog\'ia Inform\'atica Multimedia} (a project-based multimedia course).}
 
 
-% ------- Service ---------------------------------------------------
-\begin{center}
-\section*{\huge Service}
-\vspace{2ex}
-\end{center}
+% =======================================================================
+\supersection{Service}
+% =======================================================================
 
-\section*{\hspace{-1cm}Masters Program in Computer Science}
+% -----------------------------------------------------------------------
+\section{Masters Program in Computer Science}
+% -----------------------------------------------------------------------
 
-From 2019 to 2025, I was the Director of the Masters Program in Computer Science (MPCS) at the University of Chicago. My responsibilities as Director included the following:
+From 2019 to 2025, I was the Director of the Masters Program in Computer Science (MPCS) at the University of Chicago, a large graduate program with more than 300 students and nearly 100 yearly course offerings.
+
+My responsibilities as Director included the following:
 
 \begin{itemize}
  \item Setting general direction for the program in consultation with departmental leadership, and spearheading new initiatives.
@@ -217,317 +204,301 @@ From 2019 to 2025, I was the Director of the Masters Program in Computer Science
  \item Leading searches for clinical and adjunct faculty.
 \end{itemize}
 
-\noindent Notable achievements in this role include:
+\medskip\noindent Notable achievements in this role include:
 
 \begin{itemize}
- \item Oversaw the MPCS’s sudden transition to online learning during the COVID-19 pandemic, providing critical support to faculty and students.
+ \item Oversaw the MPCS's sudden transition to online learning during the COVID-19 pandemic, providing critical support to faculty and students.
  \item Successfully recruited ten new part-time instructors and three new full-time clinical faculty members.
  \item Launched a new Application Development Capstone, where students work on a mobile/web application of their own choosing over the course of a quarter.
- \item Improved a number of administrative processes, allowing for more streamlined operations within the MPCS, including a complete overhaul of our pre-registration system, and the implementation of a new waitlist system. 
+ \item Improved a number of administrative processes, allowing for more streamlined operations within the MPCS, including a complete overhaul of our pre-registration system, and the implementation of a new waitlist system.
 \end{itemize}
 
-Before becoming the Director of the MPCS, I was the Academic Director of the program\footnote{The position title is formally \emph{Associate Director of Academics} and, before that, \emph{Associate Director of Technology}. However, the responsibilities have always been those of an Academic Director} from 2012 to 2019.
+\medskip
+Before becoming the Director of the MPCS, I was the Academic Director of the program from 2012 to 2019. (The position title is formally \emph{Associate Director of Academics} and, before that, \emph{Associate Director of Technology}. However, the responsibilities have always been those of an Academic Director.)
 
-\section*{\hspace{-1cm}Committees}
-\begin{category}{National}
-\citembullet Computing Research Association -- Education. 2022 -- \emph{present}
+% -----------------------------------------------------------------------
+\section{Committees}
+% -----------------------------------------------------------------------
 
-\url{https://cra.org/crae/}
+\cvitem{National}{\begin{itemize}
+\item Computing Research Association -- Education. 2022 -- \emph{present}\newline
+\url{https://cra.org/crae/}\newline
+My work on this committee focuses on finding ways to support teaching-track faculty, as well as CS students interested in pursuing a teaching career. See \emph{Teaching Development and Outreach} under \emph{Teaching} for more details.
+\end{itemize}}
 
-My work on this committee focuses on finding ways to support teaching-track faculty, as well as CS students interested in pursuing a teaching career. I am involved in the following efforts:
+\cvitem{University}{\begin{itemize}
+\item AI Education Working Group, 2025
+\item Chicago Maroon Advisory Board. 2019 -- \emph{present}
+\item Ad Hoc Committee on Exam Accommodations. September--December 2022
+\end{itemize}}
 
-\begin{itemize}
- \item \emph{Career Landscapes Workshop}\\
- \url{https://cra.org/crae/career-landscape-workshop/}\\
- A yearly series of online workshops focused on explaining the landscape of teaching-track careers, how to prepare for these careers, and what to expect from the application process.
- \item \emph{Professional Development Pre-Symposium for Teaching-Track Faculty}\\
- \url{https://cra.org/crae/cra-professional-development-pre-symposium-for-teaching-track-faculty/}
- An annual event held in conjunction with the SIGCSE Technical Symposium. Designed for teaching-track faculty in PhD-granting computing departments, this full-day, in-person workshop offers tailored professional development, hands-on learning, and networking for early to mid-career educators and those considering a teaching-track career path.
-\end{itemize}
+\cvitem{CS Department}{\begin{itemize}
+\item Placement Exams \emph{(Chair)}. 2023 -- \emph{present}
+\item Equity, Diversity, and Inclusion. 2020 -- 2025
+\item Computing and IT. 2020 -- 2025
+\item External Relations \& Web. 2017 -- 2020
+\end{itemize}}
 
-\end{category}
+\cvitem{Industry}{\begin{itemize}
+\item Steadfast Networks Advisory Board. 2011 -- 2017.
+\end{itemize}}
 
-\begin{category}{University}
-\citembullet AI Education Working Group, 2025
-\citembullet Chicago Maroon Advisory Board. 2019 -- \emph{present}
-\citembullet Ad Hoc Committee on Exam Accommodations. September-December 2022
-\end{category}
+% -----------------------------------------------------------------------
+\section{Peer Review}
+% -----------------------------------------------------------------------
 
-\begin{category}{CS\\Department}
-\citembullet Placement Exams \emph{(Chair)}. 2023 -- \emph{present}
-\citembullet Equity, Diversity, and Inclusion. 2020 -- 2025
-\citembullet Computing and IT. 2020 -- 2025
-\citembullet External Relations \& Web. 2017 -- 2020
-\end{category}
+\cvitem{NSF}{\begin{itemize}
+\item Panelist -- NSF Review Panel. January 2023.
+\end{itemize}}
 
-\begin{category}{Industry}
- \citembullet Steadfast Networks Advisory Board. 2011 -- 2017.
-\end{category}
+\cvitem{PC Chair}{\begin{itemize}
+\item Workshop co-chair. 20th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 11--14, 2020 -- Melbourne, Australia.
+\item Workshop and Tutorial co-chair. 19th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 14--17, 2019 -- Larnaca, Cyprus.
+\item Doctoral Symposium co-chair. 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 14--17, 2017 -- Madrid, Spain.
+\item Poster/demo co-chair. 14th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 26--29, 2014 -- Chicago, IL, USA.
+\end{itemize}}
 
+\cvitem{PC Member}{\begin{itemize}
+\item Workshop on Virtualization in High-Performance Cloud Computing (VHPC), 2010 -- 2022
+\item 10th IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA'12), 10--13 July 2012, Madrid, Spain
+\item 2nd International Workshop on Data Intensive Computing in the Clouds (DataCloud-SC11), November 14th, 2011, Seattle, Washington, USA
+\item 5th International Workshop on Content Delivery Networks (CDN 2010), May 17--20, 2010, Melbourne, Australia
+\item V Jornadas Cient\'ifico-T\'ecnicas en Servicios Web y SOA, September 30 -- October 1, 2009, Madrid, Spain
+\item IV Jornadas Cient\'ifico-T\'ecnicas de Servicios Web y SOA, October 29--30, 2008, Seville, Spain
+\end{itemize}}
 
+\cvitem{Reviewer (Journals)}{\begin{itemize}
+\item ACM Transactions on Internet Technology (\url{http://toit.acm.org/})
+\item IEEE Transactions on Cloud Computing (\url{http://www.computer.org/portal/web/tcc/})
+\item IEEE Transactions on Computers (\url{http://www.computer.org/portal/web/tc/})
+\item IEEE Transactions on Parallel and Distributed Systems (\url{http://www.computer.org/portal/web/tpds})
+\item Journal of Parallel and Distributed Computing (\url{http://ees.elsevier.com/jpdc/})
+\end{itemize}}
 
+\cvitem{Reviewer (Delegated)}{\begin{itemize}
+\item The International Conference for High Performance Computing, Networking, Storage, and Analysis 2011 (SC'11), November 14--17, 2011, Seattle, Washington, USA
+\item 17th International European Conference on Parallel and Distributed Computing (Euro-Par 2011), August 29--September 2, 2011
+\item Energy Efficient Grids, Clouds and Clusters Workshop 2009 (E2GC2 2009), October 13, 2009, Banff, Canada
+\item Workshop on Many-Task Computing on Grids and Supercomputers 2008 (MTAGS 2008), November 17th, 2008, Austin, Texas, USA
+\end{itemize}}
 
-\section*{\hspace{-1cm}Peer Review}
+% -----------------------------------------------------------------------
+\section{Student Mentoring and Advising}
+% -----------------------------------------------------------------------
 
-\begin{category}{NSF}
- \citembullet Panelist -- NSF Review Panel. January 2023.
-\end{category}
+\cventry{2017 -- 2020}{Faculty Affiliate, Burton-Judson Courts}{}{}{}{Participated in a number of events in Burton-Judson Courts (an on-campus dormitory), such as judging competitive events, holding talks and fireside chats, and running movie nights.}
 
-
-\begin{category}{Program Committee Chair}
-\citembullet Workshop co-chair. 20th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 11-14, 2020 -- Melbourne, Australia.
-\citembullet Workshop and Tutorial co-chair. 19th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 14-17, 2019 -- Larnaca, Cyprus.
-\citembullet Doctoral Symposium co-chair. 17th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing. May 14-17, 2017 -- Madrid, Spain.
-\citembullet Poster/demo co-chair. 14th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing
-May 26-29, 2014 -- Chicago, IL, USA.
-\end{category}
-
-\begin{category}{Program Committee Member}
-\citembullet Workshop on Virtualization in High-Performance Cloud Computing (VHPC), 2010 -- 2022
-\citembullet 10th IEEE International Symposium on Parallel and Distributed Processing with Applications (ISPA'12), 10-13 July 2012, Madrid, Spain 
-\citembullet 2nd International Workshop on Data Intensive Computing in the Clouds (DataCloud-SC11), November 14th, 2011, Seattle, Washington, USA
-\citembullet 5th International Workshop on Content Delivery Networks (CDN 2010), May 17-20, 2010, Melbourne, Australia
-\citembullet V Jornadas Científico-Técnicas en Servicios Web y SOA, September 30 - October 1, 2009, Madrid, Spain
-\citembullet IV Jornadas Científico-Técnicas de Servicios Web y SOA, October 29-30, 2008, Seville, Spain
-\end{category}
-
-\begin{category}{Reviewer (Journals)}
-\citembullet ACM Transactions on Internet Technology (\url{http://toit.acm.org/})
-\citembullet IEEE Transactions on Cloud Computing (\url{http://www.computer.org/portal/web/tcc/})
-\citembullet IEEE Transactions on Computers (\url{http://www.computer.org/portal/web/tc/})
-\citembullet IEEE Transactions on Parallel and Distributed Systems (\url{http://www.computer.org/portal/web/tpds})
-\citembullet Journal of Parallel and Distributed Computing (\url{http://ees.elsevier.com/jpdc/})
-\end{category}
-
-\begin{category}{Reviewer (Delegated)}
-\citembullet The International Conference for High Performance Computing, Networking, Storage, and Analysis 2011 (SC'11), November 14-17, 2011, Seattle, Washington, USA
-\citembullet 17th International European Conference on Parallel and Distributed Computing (Euro-Par 2011), August 29-September 2, 2011 
-\citembullet Energy Efficient Grids, Clouds and Clusters Workshop 2009 (E2GC2 2009), October 13, 2009, Banff, Canada 
-\citembullet Workshop on Many-Task Computing on Grids and Supercomputers 2008 (MTAGS 2008), November 17th, 2008, Austin, Texas, USA
-\end{category}
-
-\section*{\hspace{-1cm}Student Activities}
-
-\begin{category}{}
-\citem{Faculty Affiliate, Burton-Judson Courts}, 2017 -- 2020\\
-Participated in a number of events in Burton-Judson Courts (an on-campus dormitory), such as judging competitive events, holding talks and fireside chats, and running movie nights.
-
-\citem{Academic Advisor}, 2010 -- \emph{present}\\
-I am the academic advisor of the Department of Computer Science's student organizations:
+\cventry{2010 -- present}{Academic Advisor}{}{}{}{I am the academic advisor of the Department of Computer Science's student organizations:
 \begin{itemize}
 \item ACM-W (\url{https://www.facebook.com/acmwuchicago/}), focused on Women in Computing
 \item CompileHer (\url{http://compileher.com/}), focused on teaching STEM and computing to middle school girls.
 \item Uncommon Hacks (\url{https://uncommonhacks.com/}), which runs major hackathons throughout the year.
-\end{itemize}
-\citem{ICPC Coach}, 2007 -- 2019\\
-The ACM International Collegiate Programming Contest (ICPC) is the world's largest and oldest collegiate programming competition. I coached the University of Chicago's ICPC teams, and my responsibilities included selecting and advising teams, organizing practice contests, organizing a qualifying contest before the regional contest, and coordinating the logistics of our participation in the World Finals (when the University of Chicago qualified for the finals). I have led teams to the 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, and 2019 World Finals of the ICPC. Only 120 teams out of nearly 10,000 teams each year earn this distinction.
-\end{category}
+\end{itemize}}
 
+\cventry{2007 -- 2019}{ICPC Coach}{}{}{}{The ACM International Collegiate Programming Contest (ICPC) is the world's largest and oldest collegiate programming competition. I coached the University of Chicago's ICPC teams, and my responsibilities included selecting and advising teams, organizing practice contests, organizing a qualifying contest before the regional contest, and coordinating the logistics of our participation in the World Finals (when the University of Chicago qualified for the finals). I have led teams to the 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, and 2019 World Finals of the ICPC. Only 120 teams out of nearly 10,000 teams each year earn this distinction.}
 
-\section*{\hspace{-1cm}Organization of Programming Competitions}
+% -----------------------------------------------------------------------
+\section{Organization of Programming Competitions}
+% -----------------------------------------------------------------------
 
-\begin{category}{}
-\citem{Director of Systems}, ACM/ICPC Mid-Central USA Programming Contest, 2015 -- 2019\\
-I oversaw the contest management systems for the ICPC's Mid-Central USA regional contest (\url{http://www.icpc-midcentral.us}), which typically involves 150+ teams (450+ contestants) participating in 8-10 distributed sites throughout Illinois, Kentucky, Missouri, Arkansas, and Tennessee.
-\citem{Site Director}, Chicago site of the ACM/ICPC Mid-Central USA Programming Contest, 2012 -- 2018\\
-I ran the Chicago site of the ICPC's Mid-Central USA regional contest, which typically hosts 20+ teams (60+ contestants) on the day of the regional contest.
-\citem{Contest Director}, North American Invitational Programming Contest, 2012 -- 2019\\
-The NAIPC (\url{http://naipc.uchicago.edu}) is an on-line contest that attracts 500+ contestants, including the top teams from each year's North American regional contests, which are invited to participate in an exclusive Invitational Division. The contest also includes an Open Division that is open to everyone. In 2012-2014, the NAIPC was held as an on-site contest in Chicago.
-\end{category}
+\cventry{2015 -- 2019}{Director of Systems}{ACM/ICPC Mid-Central USA Programming Contest}{}{}{I oversaw the contest management systems for the ICPC's Mid-Central USA regional contest (\url{http://www.icpc-midcentral.us}), which typically involves 150+ teams (450+ contestants) participating in 8--10 distributed sites throughout Illinois, Kentucky, Missouri, Arkansas, and Tennessee.}
+\cventry{2012 -- 2018}{Site Director}{Chicago site of the ACM/ICPC Mid-Central USA Programming Contest}{}{}{I ran the Chicago site of the ICPC's Mid-Central USA regional contest, which typically hosts 20+ teams (60+ contestants) on the day of the regional contest.}
+\cventry{2012 -- 2019}{Contest Director}{North American Invitational Programming Contest}{}{}{The NAIPC (\url{http://naipc.uchicago.edu}) is an on-line contest that attracts 500+ contestants, including the top teams from each year's North American regional contests, which are invited to participate in an exclusive Invitational Division. The contest also includes an Open Division that is open to everyone. In 2012--2014, the NAIPC was held as an on-site contest in Chicago.}
 
-
-\section*{\hspace{-1cm}Open Source Software}
+% -----------------------------------------------------------------------
+\section{Open Source Software}
+% -----------------------------------------------------------------------
 
 My open source code can be found on GitHub: \url{https://github.com/borjasotomayor}. I also contribute to several repositories in \url{https://github.com/uchicago-cs}
 
-\begin{category}{}
-\citembullet I have published the following open source projects:
-
+\cvlistitem{I have published the following open source projects:
 \begin{itemize}
  \item \textbf{chiRC}, \textbf{chiTCP}, \textbf{chiRouter}, and \textbf{chidb} (\url{https://chi.cs.uchicago.edu/}), a collection of educational programming projects used in UChicago's systems courses.
  \item \textbf{Globus Provision}, a tool for deploying fully-configured Globus systems on Amazon EC2. No longer under active development.
  \item \textbf{Haizea} (\url{http://haizea.cs.uchicago.edu/}), a virtual machine-based lease management architecture I developed for my PhD research. No longer under active development.
-\end{itemize}
+\end{itemize}}
 
-\citembullet I have been a contributor to the OpenNebula project (\url{http://www.opennebula.org/}), an open source data center virtualization suite. I have also been the Community Manager for the OpenNebula project from 2010 to 2012.
+\cvlistitem{I have been a contributor to the OpenNebula project (\url{http://www.opennebula.org/}), an open source data center virtualization suite. I have also been the Community Manager for the OpenNebula project from 2010 to 2012.}
 
-\citembullet I have participated in Google Summer of Code (\url{http://code.google.com/soc/}) several times:
-
+\cvlistitem{I have participated in Google Summer of Code (\url{http://code.google.com/soc/}) several times:
 \begin{itemize}
  \item 2011: Mentor and Organization Administrator for The Globus Alliance.
  \item 2010: Organization Administrator for The Globus Alliance. Mentor for the OpenNebula project (\url{http://www.opennebula.org/}).
  \item 2009: Organization Administrator for The Globus Alliance.
  \item 2008: Mentor and Organization Administrator for The Globus Alliance (\url{http://www.globus.org/})
+\end{itemize}}
+
+
+% =======================================================================
+\supersection{Research}
+% =======================================================================
+
+% -----------------------------------------------------------------------
+\section{Research Interests}
+% -----------------------------------------------------------------------
+
+\cvlistitem{I am currently on research leave, working on a study of how Computer Science departments in the US support their teaching activities. More details are available here:\newline\url{https://people.cs.uchicago.edu/~borja/cs-teaching-support-study.html}}
+
+\cvlistitem{In the past, my research interests have mostly revolved around virtual machine-based resource provisioning models (where ``resource'' includes hardware, software, and time) using a leasing abstraction. Most of my research work was relevant to Infrastructure-as-a-Service (IaaS) cloud computing, since IaaS clouds often use virtual machines to provision computational resources and my work deals with how to (1) map heterogeneous user requests (best effort, advance reservations, immediate availability, etc.) to virtual machines and (2) provision those virtual machines efficiently. Since a lot of my work involved writing resource scheduling code, my secondary interests included parallel job scheduling and scheduling performance metrics.}
+
+% -----------------------------------------------------------------------
+\section{Past Projects}
+% -----------------------------------------------------------------------
+
+\cventry{2010 -- 2012}{Globus Online}{Staff Researcher}{}{}{I was a staff researcher in the Globus Online team at the University of Chicago's Computation Institute, where I focused on resource provisioning problems. I was the main developer of the Globus Provision project (\url{http://globus.org/provision/}), a tool for deploying fully-configured Globus systems on Amazon EC2.}
+\cventry{2008, 2009}{Reservoir (EU FP7 project)}{Visiting Researcher at University Complutense of Madrid}{}{}{Ongoing collaboration with the University Complutense of Madrid's Distributed Systems Architecture group (\url{http://www.dsa-research.org/})}
+\cventry{2005 -- 2008}{Virtual Workspaces}{Research Assistant}{}{}{\url{http://workspace.globus.org/}}
+\cventry{2004}{CrossGrid}{Research Associate}{}{}{Writing and revising tutorial material.}
+\cventry{2000 -- 2004}{BOOLE--DEUSTO}{Lead Programmer}{}{}{BOOLE--DEUSTO is a software aid for Digital Electronics courses.}
+
+
+% =======================================================================
+\supersection{Publications}
+% =======================================================================
+
+Citations and additional information also available on my Google Scholar profile:\newline \url{http://bit.ly/google-scholar-borja}
+
+% -----------------------------------------------------------------------
+\section{Books}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item \emph{Computer Science with Applications}. Anne Rogers, Borja Sotomayor. Online textbook used in UChicago's introductory CS classes. Available for free at: \url{https://book.cs-apps.org/}
+\item \emph{Globus\textregistered{} Toolkit 4: Programming Java Services}. Borja Sotomayor, Lisa Childers. December 2005, Morgan Kaufmann Publishers. ISBN: 0123694043.
 \end{itemize}
-\end{category}
+
+% -----------------------------------------------------------------------
+\section{Book Chapters}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item \emph{Transformar la Tecnolog\'ia para el Bien Com\'un a Trav\'es del Pensamiento Computacional}. Borja Sotomayor, Pablo Garaizar, in \emph{La mirada larga. Retos de futuro para la ciudadan\'ia vasca}, Editor: I\~nigo Calvo Sotomayor. Catarata, 2023.
+\item \emph{On the Management of Virtual Machines for Cloud Infrastructures}. M. Llorente, R. S. Montero, B. Sotomayor, D. Breitgand, A. Maraschini, E. Levy, B. Rochwerger, in \emph{Cloud Computing: Principles and Paradigms}, Editors: Radjkumar Buyya, James Broberg, Andrzej M. Goscinski, Wiley, 2011.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Theses}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item \textbf{Dissertation}. \emph{Provisioning Computational Resources Using Virtual Machines and Leases}. University of Chicago, Department of Computer Science. Defended July 7, 2010. \url{http://people.cs.uchicago.edu/~borja/dissertation/}
+\item \textbf{Master's Paper}. \emph{A Resource Management Model for VM-based Virtual Workspaces}. University of Chicago, Department of Computer Science. Defended January 3rd, 2007.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Refereed Papers (CS Education)}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item B.Sotomayor and A.Shaw. \emph{chidb: Building a Simple Relational Database System from Scratch}. 47th ACM Technical Symposium on Computing Science Education (SIGCSE '16), March 2--5, 2016, Memphis, USA.
+\item A.Bloomfield and B.Sotomayor. \emph{A Programming Contest Strategy Guide}. 47th ACM Technical Symposium on Computing Science Education (SIGCSE '16), March 2--5, 2016, Memphis, USA.
+\item Javier Garc\'ia Zub\'ia, Jes\'us Sanz Mart\'inez, Borja Sotomayor Basilio. \emph{A new approach to educational software for logic analysis and design}. IADAT e2004, International Conference on Education, Bilbao (Spain), July 7--9, 2004.
+\item Javier Garc\'ia Zub\'ia and Borja Sotomayor Basilio. \emph{Software for analysis and design of digital systems in education. A comparison between BOOLE-DEUSTO and LogicAid} (short paper). EWME 2004, 5th European Workshop on Microelectronics Education, Lausanne (Switzerland), April 15--16, 2004.
+\item Javier Garc\'ia Zub\'ia, Jes\'us Sanz Mart\'inez, Borja Sotomayor Basilio. \emph{BOOLE-DEUSTO, la aplicaci\'on para sistemas digitales}. VII Jornadas de Ense\~nanza Universitaria de la Inform\'atica, JENUI 2001 (Palma de Mallorca, June 16--18, 2001). ISBN: 84--7632--657--2. Pgs. 417--420.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Refereed Papers (Grid/Cloud Computing)}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item B.Liu, R.Madduri, B.Sotomayor, et al. \emph{Cloud-based bioinformatics workflow platform for large-scale next-generation sequencing analyses}. Journal of Biomedical Informatics, Vol. 49 (June 2014), pp. 119--133
+\item B.Liu, B.Sotomayor, R.Madduri, K.Chard, I.Foster. \emph{Deploying Bioinformatics Workflows on Clouds with Galaxy and Globus Provision}. In Proceedings of the 2012 SC Companion: High Performance Computing, Networking Storage and Analysis (SCC '12). IEEE Computer Society, Washington, DC, USA, 1087--1095.
+\item B.Sotomayor, R.Santiago Montero, I.Mart\'in Llorente, I.Foster, \emph{Virtual Infrastructure Management in Private and Hybrid Clouds}. IEEE Internet Computing, vol. 13, no. 5, pp. 14--22, Sep./Oct. 2009.
+\item B.Sotomayor, R.Santiago Montero, I.Mart\'in Llorente, I.Foster, \emph{Resource Leasing and the Art of Suspending Virtual Machines}. The 11th IEEE International Conference on High Performance Computing and Communications (HPCC-09), June 25--27, 2009, Seoul, Korea.
+\item B.Sotomayor, R.Santiago Montero, I.Mart\'in Llorente, I.Foster, \emph{Capacity Leasing in Cloud Systems using the OpenNebula Engine} (short paper). Workshop on Cloud Computing and its Applications 2008 (CCA08), October 22--23, 2008, Chicago, Illinois, USA.
+\item B.Sotomayor, K.Keahey, I.Foster, \emph{Combining Batch Execution and Leasing Using Virtual Machines}. HPDC 2008, June 23--27, 2008, Boston, Massachusetts, USA.
+\item A.Almeida, B.Sotomayor, J.Abaitua, D.L\'opez-de-Ipi\~na, \emph{folk2onto: Bridging the gap between social tags and ontologies}. KRRSW 2008 (part of ESWC 2008), June 1--5, 2008, Tenerife, Spain.
+\item B.Sotomayor, K.Keahey, I.Foster, T.Freeman. \emph{Enabling Cost-Effective Resource Leases with Virtual Machines} (short paper). Hot Topics session in HPDC 2007, Monterey Bay, CA (USA), June 27--29, 2007.
+\item T.Freeman, K.Keahey, I.Foster, A.Rana, B.Sotomayor, F.Wuerthwein. \emph{Division of Labor: Tools for Growth and Scalability of Grids}. ICSOC 2006, Chicago (USA), December 4--7, 2006.
+\item B.Sotomayor, K.Keahey, I.Foster. \emph{Overhead Matters: A Model for Virtual Resource Management}. VTDC 2006 (part of SuperComputing '06), Tampa, FL (USA), November 17, 2006.
+\item T.Freeman, K.Keahey, B.Sotomayor, X.Zhang, I.Foster, and D.Scheftner. \emph{Virtual Clusters for Grid Communities}. CCGrid 2006, Singapore, May 16--19, 2006.
+\item A.Rana, F.Wuerthwein, R.Gardner, K.Keahey, T.Freeman, A.Vaniachine, B.Holzman, et al. \emph{An Edge Services Framework (ESF) for EGEE, LCG, and OSG}. CHEP (Computing in High Energy and Nuclear Physics) 2006, Mumbai, February 13--17, 2006.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Non-refereed work}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item I.Foster, T.Freeman, K.Keahey, A.Rana, B.Sotomayor, F.Wuerthwein. \emph{ANL/MCS-P1316-0106. Division of Labor: Tools for Growth and Scalability of Grids} (technical report). January 2006
+\item Borja Sotomayor, Lisa Childers. \emph{GDP: The Globus Documentation Project} (poster). GlobusWORLD 2005, Boston (USA), February 7--11, 2005.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Software}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item Javier Garc\'ia Zub\'ia, Jes\'us Sanz Mart\'inez, Borja Sotomayor Basilio. \emph{Manual de usuario del BOOLE-DEUSTO v2.1 - Entorno de dise\~no l\'ogico / BOOLE-DEUSTOren erabiltzaileentzako eskuliburua / BOOLE-DEUSTO user manual} [Includes CD-ROM]. Universidad de Deusto - Departamento de Publicaciones. Bilbao (Spain), 2005. ISBN: 84--7485--973--5.
+\item Javier Garc\'ia Zub\'ia, Jes\'us Sanz Mart\'inez, Borja Sotomayor Basilio. \emph{BOOLE-DEUSTO, entorno de dise\~no l\'ogico}. Universidad de Deusto--Departamento de Publicaciones. Bilbao (Spain), 2004. ISBN: 84--7485--929--8.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\newpage
+\section{Workshops, Tutorials, BoFs, Invited Talks}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item \emph{Preparing for XD: How TG Resource Providers Can Easily Enable Globus Online for Data Movement}. Borja Sotomayor, Rajkumar Kettimuthu, Stuart Martin. July 18, 2011, Teragrid 2011, Salt Lake City, Utah, USA.
+\item \emph{Reliable File Transfers with Globus Online}. Invited Talk, International Research Workshop on Advanced High Performance Computing Systems, Cetraro, Italy, June 27, 2011.
+\item \emph{Development Tools for GT4 Service Programming}. Borja Sotomayor (session organizer), Shannon Hastings, Thomas Friese, Thomas Cottenier. Mini-symposium, GlobusWORLD 2006, Washington D.C. (USA), September 11--15, 2006.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Popular Press}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item Pablo Garaizar Sagarminaga, Alvaro Mar\'in Illera, and Borja Sotomayor Basilio. \emph{e-GHOST y GedI: Fomentando Software Libre y Web fuera de las aulas}. Revista ESIDE (\#4), 2003. DL: BI--599--00. Pgs. 5--7.
+\item Unai Extremo Baigorri and Borja Sotomayor Basilio. \emph{La Plataforma .NET: \textquestiondown El Futuro de la Web?}. Revista ESIDE (\#3), 2002. DL: BI--599--00. P\'ags. 18--21.
+\end{itemize}
+
+% -----------------------------------------------------------------------
+\section{Translations}
+% -----------------------------------------------------------------------
+
+\begin{itemize}
+\item Translation into Spanish of Chapter 9 (\emph{Numbers}) of the \emph{Chicago Manual of Style (16th Ed.)}, as part of the official adaptation of the Chicago Manual of Style into Spanish: \emph{Manual de estilo Chicago-Deusto}, Publicaciones de la Universidad de Deusto, 2013. ISBN: 978-84-15759-14-0.
+\end{itemize}
 
 
+% =======================================================================
+\supersection{Additional Information}
+% =======================================================================
 
-% ------- Research ---------------------------------------------------
+% -----------------------------------------------------------------------
+\section{Skills and Competencies}
+% -----------------------------------------------------------------------
 
+\subsection{Technical Skills}
+\cvitem{Programming Languages}{Experienced in Python and C. Conversant in C++ and Java.}
+\cvitem{Web Development}{Backend web application development with Django and PostgreSQL. Working knowledge of HTML, CSS, JavaScript, and Bootstrap.}
+\cvitem{DevOps}{Docker containerization and deployment. CI/CD with GitHub Actions. Experienced in GNU/Linux system administration.}
+\cvitem{Databases}{Advanced knowledge of relational database analysis, design, and implementation. Working knowledge of PostgreSQL, MySQL, and SQLite.}
+\cvitem{Development Tools}{Git and GitHub. Test-driven development with pytest. Type checking with mypy.}
+\cvitem{Document Composition}{Experienced in Sphinx and \LaTeX{}.}
 
-\begin{center}
-\section*{\huge Research}
-\vspace{2ex}
-\end{center}
+\subsection{Languages}
+\cvitem{Spanish}{Native language.}
+\cvitem{English}{Spoken and written with fluency. Bilingual education from ages 2--15. Certificate of Proficiency in English from the University of Cambridge with overall grade of A.}
+\cvitem{Euskera (Basque)}{Basic knowledge. Reached 6th level of HABE (studied from 1997 to 1999 in a Basque Language Academy or \emph{euskaltegi}).}
 
+% -----------------------------------------------------------------------
+\section{Affiliations}
+% -----------------------------------------------------------------------
 
-\begin{category}{Research interests}
-\citembullet I am currently on research leave, working on a study of how Computer Science departments in the US support their teaching activities. More details are available here:\\\url{https://people.cs.uchicago.edu/~borja/cs-teaching-support-study.html}
+\cvlistitem{Association for Computing Machinery (Member)}
+\cvlistitem{ACM Special Interest Group on Computer Science Education (Member)}
+\cvlistitem{Electronic Frontier Foundation (Member)}
 
-\citembullet In the past, my research interests have mostly revolved around virtual machine-based resource provisioning models (where “resource” includes hardware, software, and time) using a leasing abstraction. Most of my research work was relevant to Infrastructure-as-a-Service (IaaS) cloud computing, since IaaS clouds often use virtual machines to provision computational resources and my work deals with how to (1) map heterogeneous user requests (best effort, advance reservations, immediate availability, etc.) to virtual machines and (2) provision those virtual machines efficiently. Since a lot of my work involved writing resource scheduling code, my secondary interests included parallel job scheduling and scheduling performance metrics.
+% -----------------------------------------------------------------------
+\section{Awards, Prizes, and Honors}
+% -----------------------------------------------------------------------
 
-\end{category}
-%\begin{category}{Current projects}
-%\end{category}
-\begin{category}{Past Projects}
-\citem{Globus Online}\\
-Staff Researcher, September 2010 -- June 2012\\
-I was a staff researcher in the Globus Online team at the University of Chicago's Computation Institute, where I focused on resource provisioning problems. I was the main developer of the Globus Provision project (\url{http://globus.org/provision/}), a tool for deploying fully-configured Globus systems on Amazon EC2.
-\citem{Reservoir (EU FP7 project)}\\
-Visiting Researcher at University Complutense of Madrid, 06/2008 -- 10/2008, 06/2009 -- 10/2009\\
-Ongoing collaboration with the University Complutense of Madrid's Distributed Systems Architecture group (\url{http://www.dsa-research.org/})
-\citem{Virtual Workspaces}\\
-Research Assistant, September 2005 -- 2008\\
-\url{http://workspace.globus.org/}
-\citem{CrossGrid}\\
-Research Associate, February 2004 -- July 2004\\
-Writing and revising tutorial material.
-\citem{BOOLE--DEUSTO}\\ 
-Lead Programmer, October 2000 -- September 2004\\
-\textsf{BOOLE--DEUSTO} is a software aid for Digital Electronics courses.
-\end{category}
-
-% ------- Publications ---------------------------------------------------
-
-\begin{center}
-\section*{\huge Publications}
-\vspace{2ex}
-\end{center}
-
-Citations and additional information also available on my Google Scholar profile:\\ \url{http://bit.ly/google-scholar-borja}
-
-\subsection*{Books}
-\begin{category}{}
-\citembullet \emph{Computer Science with Applications}. Anne Rogers, Borja Sotomayor. Online textbook used in UChicago's introductory CS classes. Available for free at: \url{https://book.cs-apps.org/}
-\citembullet \emph{Globus® Toolkit 4: Programming Java Services}. Borja Sotomayor, Lisa Childers. December 2005, Morgan Kaufmann Publishers. ISBN: 0123694043.
-\end{category}
-
-\subsection*{Book Chapters}
-\begin{category}{}
-\citembullet \emph{Transformar la Tecnología para el Bien Común a Través del Pensamiento Computacional}. Borja Sotomayor, Pablo Garaizar, in \emph{La mirada larga. Retos de futuro para la ciudadanía vasca}, Editor: Iñigo Calvo Sotomayor. Catarata, 2023.
-\citembullet \emph{On the Management of Virtual Machines for Cloud Infrastructures}. M. Llorente, R. S. Montero, B. Sotomayor, D. Breitgand, A. Maraschini, E. Levy, B. Rochwerger, in \emph{Cloud Computing: Principles and Paradigms}, Editors: Radjkumar Buyya, James Broberg, Andrzej M. Goscinski, Wiley, 2011.
-\end{category}
-
-\subsection*{Theses}
-\begin{category}{}
-\citembullet \textbf{Dissertation}. \emph{Provisioning Computational Resources Using Virtual Machines and Leases}. University of Chicago, Department of Computer Science. Defended July 7, 2010. \url{http://people.cs.uchicago.edu/~borja/dissertation/}
-\citembullet \textbf{Master's Paper}. \emph{A Resource Management Model for VM-based Virtual Workspaces}. University of Chicago, Department of Computer Science. Defended January 3rd, 2007.
-\end{category}
-
-\subsection*{Refereed Papers (CS Education)}
-\begin{category}{}
-\citembullet B.Sotomayor and A.Shaw. \emph{chidb: Building a Simple Relational Database System from Scratch}. 47th ACM Technical Symposium on Computing Science Education (SIGCSE '16), March 2-5, 2016, Memphis, USA.
-\citembullet A.Bloomfield and B.Sotomayor. \emph{A Programming Contest Strategy Guide}. 47th ACM Technical Symposium on Computing Science Education (SIGCSE '16), March 2-5, 2016, Memphis, USA.
-\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{A new approach to educational software for logic analysis and design}. IADAT e2004, International Conference on Education, Bilbao (Spain), July 7--9, 2004.
-\citembullet Javier García Zubía and Borja Sotomayor Basilio. \emph{Software for analysis and design of digital systems in education. A comparison between BOOLE-DEUSTO and LogicAid} (short paper). EWME 2004,  5th European Workshop on Microelectronics Education, Lausanne (Switzerland), April 15--16, 2004.
-\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{BOOLE-DEUSTO, la aplicación para
-sistemas digitales}. VII Jornadas de Enseñanza Universitaria de la
-Informática, JENUI 2001 (Palma de Mallorca, June 16--18, 2001).
-ISBN: 84--7632--657--2. Pgs. 417--420.
-\end{category}
-
-\subsection*{Refereed Papers (Grid/Cloud Computing)}
-\begin{category}{}
-\citembullet B.Liu, R.Madduri, B.Sotomayor, et al. \emph{Cloud-based bioinformatics workflow platform for large-scale next-generation sequencing analyses}. Journal of Biomedical Informatics, Vol. 49 (June 2014), pp. 119-133
-\citembullet B.Liu, B.Sotomayor, R.Madduri, K.Chard, I.Foster. \emph{Deploying Bioinformatics Workflows on Clouds with Galaxy and Globus Provision}. In Proceedings of the 2012 SC Companion: High Performance Computing, Networking Storage and Analysis (SCC '12). IEEE Computer Society, Washington, DC, USA, 1087-1095.
-\citembullet B.Sotomayor, R.Santiago Montero, I.Martín Llorente, I.Foster, \emph{Virtual Infrastructure Management in Private and Hybrid Clouds}. IEEE Internet Computing, vol. 13, no. 5, pp. 14-22, Sep./Oct. 2009.
-\citembullet B.Sotomayor, R.Santiago Montero, I.Martín Llorente, I.Foster, \emph{Resource Leasing and the Art of Suspending Virtual Machines}. The 11th IEEE International Conference on High Performance Computing and Communications (HPCC-09), June 25-27, 2009, Seoul, Korea.
-\citembullet B.Sotomayor, R.Santiago Montero, I.Martín Llorente, I.Foster, \emph{Capacity Leasing in Cloud Systems using the OpenNebula Engine} (short paper). Workshop on Cloud Computing and its Applications 2008 (CCA08), October 22-23, 2008, Chicago, Illinois, USA.
-\citembullet B.Sotomayor, K.Keahey, I.Foster, \emph{Combining Batch Execution and Leasing Using Virtual Machines}. HPDC 2008, June 23-27, 2008, Boston, Massachusetts, USA.
-\citembullet A.Almeida, B.Sotomayor, J.Abaitua, D.López-de-Ipiña, \emph{folk2onto: Bridging the gap between social tags and ontologies}. KRRSW 2008 (part of ESWC 2008), June 1-5, 2008, Tenerife, Spain.
-\citembullet B.Sotomayor, K.Keahey, I.Foster, T.Freeman. \emph{Enabling Cost-Effective Resource Leases with Virtual Machines} (short paper). Hot Topics session in HPDC 2007, Monterey Bay, CA (USA), June 27-29, 2007.
-\citembullet T.Freeman, K.Keahey, I.Foster, A.Rana, B.Sotomayor, F.Wuerthwein. \emph{Division of Labor: Tools for Growth and Scalability of Grids}. ICSOC 2006, Chicago (USA), December 4-7, 2006.
-\citembullet B.Sotomayor, K.Keahey, I.Foster. \emph{Overhead Matters: A Model for Virtual Resource Management}. VTDC 2006 (part of SuperComputing '06), Tampa, FL (USA), November 17, 2006.
-\citembullet T.Freeman, K.Keahey, B.Sotomayor, X.Zhang, I.Foster, and D.Scheftner. \emph{Virtual Clusters for Grid Communities}. CCGrid 2006, Singapore, May 16-19, 2006.
-\citembullet A.Rana, F.Wuerthwein, R.Gardner, K.Keahey, T.Freeman, A.Vaniachine, B.Holzman, et al. \emph{An Edge Services Framework (ESF) for EGEE, LCG, and OSG}. CHEP (Computing in High Energy and Nuclear Physics) 2006, Mumbai, February 13-17, 2006.
-\end{category}
-
-\subsection*{Non-refereed work}
-\begin{category}{}
-\citembullet I.Foster, T.Freeman, K.Keahey, A.Rana, B.Sotomayor, F.Wuerthwein. \emph{ANL/MCS-P1316-0106. Division of Labor: Tools for Growth and Scalability of Grids} (technical report). January 2006
-\citembullet Borja Sotomayor, Lisa Childers. \emph{GDP: The Globus Documentation Project} (poster). GlobusWORLD 2005, Boston (USA), February 7-11, 2005.
-\end{category}
-
-\subsection*{Software}
-\begin{category}{}
-\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{Manual de usuario del BOOLE-DEUSTO v2.1 - Entorno de diseño lógico / BOOLE-DEUSTOren erabiltzaileentzako eskuliburua / BOOLE-DEUSTO user manual} [Includes CD-ROM]. Universidad de Deusto - Departamento de Publicaciones. Bilbao (Spain), 2005. ISBN: 84--7485--973--5.
-\citembullet Javier García Zubía, Jesús Sanz Martínez, Borja Sotomayor Basilio. \emph{BOOLE-DEUSTO, entorno de diseño lógico}. Universidad de Deusto--Departamento de Publicaciones. Bilbao (Spain), 2004. ISBN: 84--7485--929--8.
-\end{category}
-
-\subsection*{Workshops, Tutorials, BoFs, Invited Talks}
-\begin{category}{}
-\citembullet \emph{Preparing for XD: How TG Resource Providers Can Easily Enable Globus Online for Data Movement}. Borja Sotomayor, Rajkumar Kettimuthu, Stuart Martin. July 18, 2011, Teragrid 2011, Salt Lake City, Utah, USA.
-\citembullet \emph{Reliable File Transfers with Globus Online}. Invited Talk, International Research Workshop on Advanced High Performance Computing Systems, Cetraro, Italy, June 27, 2011.
-\citembullet \emph{Development Tools for GT4 Service Programming}. Borja Sotomayor (session organizer), Shannon Hastings, Thomas Friese, Thomas Cottenier. Mini-symposium, GlobusWORLD 2006, Washington D.C. (USA), September 11-15, 2006.
-\end{category}
-
-\subsection*{Popular Press}
-\begin{category}{}
-\citembullet Pablo Garaizar Sagarminaga, Alvaro Marín Illera, and Borja Sotomayor Basilio. \emph{e-GHOST y GedI: Fomentando Software Libre y Web fuera de las aulas}. Revista ESIDE (\#4), 2003. DL: BI--599--00. Pgs. 5--7.
-\citembullet Unai Extremo Baigorri and Borja Sotomayor Basilio.
-\emph{La Plataforma .NET: ¿El Futuro de la Web?}. Revista ESIDE
-(\#3), 2002. DL: BI--599--00. Págs. 18--21.
-\end{category}
-
-\subsection*{Translations}
-\begin{category}{}
-\citembullet Translation into Spanish of Chapter 9 (\emph{Numbers}) of the \emph{Chicago Manual of Style (16th Ed.)}, as part of the official adaptation of the Chicago Manual of Style into Spanish: \emph{Manual de estilo Chicago-Deusto}, Publicaciones de la Universidad de Deusto, 2013. ISBN: 978-84-15759-14-0.
-\end{category}
-
-
-% ------- Miscellaneous ---------------------------------------------------
-\begin{center}
-\section*{\huge Additional Information}
-\vspace{2ex}
-\end{center}
-
-\section*{\hspace{-1cm}Skills and Competencies}
-
-
-\begin{category}{Technical Skills}
-\citem{Programming Languages}: Proficient in Python and C. Conversant in C++ and Java.
-\citem{Web Development}: Backend web application development with Django and PostgreSQL. Working knowledge of HTML, CSS, JavaScript, and Bootstrap.
-\citem{DevOps}: Docker containerization and deployment. CI/CD with GitHub Actions. Experienced in GNU/Linux system administration.
-\citem{Databases}: Advanced knowledge of relational database analysis, design, and implementation. Working knowledge of PostgreSQL, MySQL, and SQLite.
-\citem{Development Tools}: Git and GitHub. Test-driven development with pytest. Type checking with mypy.
-\citem{Document Composition}: Experienced in Sphinx and \LaTeX{}.
-\end{category}
-
-\begin{category}{Languages}
-\citem{Spanish} Native language.
-\citem{English} Spoken and written with fluency. Bilingual education from ages 2--15. Certificate of
-Proficiency in English from the University of Cambridge with overall grade of A.
-\citem{Euskera (Basque)} Basic knowledge. Reached 6th level of HABE (studied from 1997 to 1999 in a Basque Language Academy or \emph{euskaltegi}).
-\end{category}
-
-\section*{\hspace{-1cm}Affiliations}
-
-\begin{category}{}
-\citembullet Association for Computing Machinery (Member)
-\citembullet ACM Special Interest Group on Computer Science Education  (Member)
-\citembullet Electronic Frontier Foundation (Member)
-\end{category}
-
-\section*{\hspace{-1cm}Awards, Prizes, and Honors}
-
-\begin{category}{}
-\citem{Honorable Mention (coach)} (2009 -- 2016, 2019)\\
-ICPC World Finals
-%\citem{Sexy Men of UChicago 2015/16 Calendar}\\Featured in the month of November, alongside two other sexy faculty members.
-\citem{ICPC Coach Award}\\Awarded at ICPC 2013 World Finals for leading a team to the World Finals of the ICPC five times.
-\citem{2007 Annual Teaching Assistant Prize (Department of Computer Science, The University of Chicago)}\\``In recognition for [his] excellent work in developing and teaching the CMSC 16200 lab''.
-\citem{2006 Globus Awards}\\Best Contribution to Globus Software by a Non-committer, for \emph{The Globus Toolkit 4 Programmer's Tutorial}
-\end{category}
+\cventry{2009 -- 2016, 2019}{Honorable Mention (coach)}{ICPC World Finals}{}{}{}
+\cventry{2013}{ICPC Coach Award}{}{}{}{Awarded at ICPC 2013 World Finals for leading a team to the World Finals of the ICPC five times.}
+\cventry{2007}{Annual Teaching Assistant Prize}{Department of Computer Science, The University of Chicago}{}{}{``In recognition for [his] excellent work in developing and teaching the CMSC 16200 lab''.}
+\cventry{2006}{Globus Awards}{}{}{}{Best Contribution to Globus Software by a Non-committer, for \emph{The Globus Toolkit 4 Programmer's Tutorial}}
 
 \end{document}
